@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import MobileMenu from "../MobileMenu";
 import Menu from "../Menu";
+import { useLocale } from "next-intl";
+import { useRouter, usePathname } from "@/i18n/navigation";
 
 // ✅ Define props type
 type Header1Props = {
@@ -12,6 +14,16 @@ type Header1Props = {
 };
 
 export default function Header1({ scroll, handleMobileMenu, handlePopup, handleSidebar }: Header1Props) {
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const toggleLanguage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const nextLocale = locale === "en" ? "ar" : "en";
+    router.replace(pathname, { locale: nextLocale });
+  };
+
   return (
     <>
       {/* main header */}
@@ -69,8 +81,9 @@ export default function Header1({ scroll, handleMobileMenu, handlePopup, handleS
                     </div>
                     <div className="main-menu-two__right">
                         <div className="main-menu-two__language-switcher">
-                            <Link href="#" style={{ fontSize: '24px', color: 'var(--techguru-white)' }}>
+                            <Link href="#" onClick={toggleLanguage} style={{ fontSize: '24px', color: 'var(--techguru-white)', display: 'flex', alignItems: 'center', gap: '8px' }}>
                                 <i className="fa fa-globe"></i>
+                                <span style={{ fontSize: '14px', fontWeight: 'bold', textTransform: 'uppercase' }}>{locale === 'en' ? 'AR' : 'EN'}</span>
                             </Link>
                         </div>
                     </div>
@@ -94,8 +107,9 @@ export default function Header1({ scroll, handleMobileMenu, handlePopup, handleS
                     </div>
                     <div className="main-menu-two__right">
                         <div className="main-menu-two__language-switcher">
-                            <Link href="#" style={{ fontSize: '24px', color: 'var(--techguru-white)' }}>
+                            <Link href="#" onClick={toggleLanguage} style={{ fontSize: '24px', color: 'var(--techguru-white)', display: 'flex', alignItems: 'center', gap: '8px' }}>
                                 <i className="fa fa-globe"></i>
+                                <span style={{ fontSize: '14px', fontWeight: 'bold', textTransform: 'uppercase' }}>{locale === 'en' ? 'AR' : 'EN'}</span>
                             </Link>
                         </div>
                     </div>

@@ -9,7 +9,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ breadcrumbTitle })  => {
   return (
 
     <section className="page-header">
-            <div className="page-header__bg" style={{ backgroundImage: "url(/assets/images/backgrounds/page-header-bg.jpg)" }}>
+            <div className="page-header__bg" style={{ backgroundImage: "url(/assets/images/backgrounds/page-header-ai.png)" }}>
             </div>
             <div className="container">
                 <div className="page-header__inner">

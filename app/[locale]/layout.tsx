@@ -11,6 +11,8 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import 'swiper/css/effect-fade'
 import CustomCursor from "@/components/elements/CustomCursor";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -29,17 +31,28 @@ export const metadata: Metadata = {
   description: "Agentic Ai systems that execute work autonomously for organizations in Abu Dhabi and across the GCC.",
 };
 
-export default function RootLayout({
+export async function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "ar" }];
+}
+
+export default async function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <body className={`custom-cursor ${spaceGrotesk.className}`}>
-        <CustomCursor />
-        <div className={marcellus.className}></div>
-        {children}
+        <NextIntlClientProvider messages={messages} locale={locale}>
+          <CustomCursor />
+          <div className={marcellus.className}></div>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

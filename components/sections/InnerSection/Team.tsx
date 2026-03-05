@@ -90,17 +90,17 @@ export default function Team() {
                                             <div className="team-two__img-box">
                                                 <div className="team-two__img">
                                                     <Image
-                                                      src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop"
+                                                      src="/sahar.jpeg"
                                                       alt="Portrait of Sahar Gebril, General Manager"
                                                       width={410}
                                                       height={450}
                                                       priority
+                                                      style={{ objectFit: 'cover' }}
                                                     />
                                                 </div>
-                                                <div className="team-two__social">
+                                                <div className="team-two__social" style={{ background: 'rgba(0,0,0,0.5)', padding: '10px 5px', borderRadius: '15px', backdropFilter: 'blur(4px)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px' }}>
                                                     <Link href="#"><span className="icon-facebook"></span></Link>
                                                     <Link href="#"><span className="icon-dribble"></span></Link>
-
                                                     <Link href="#"><span className="icon-linkedin"></span></Link>
                                                 </div>
                                                 <div className="team-two__title-box">
@@ -117,17 +117,17 @@ export default function Team() {
                                             <div className="team-two__img-box">
                                                 <div className="team-two__img">
                                                     <Image
-                                                      src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=800&auto=format&fit=crop"
+                                                      src="/Kaifi.jpeg"
                                                       alt="Portrait of Kaifi Durani, IT Manager"
                                                       width={410}
                                                       height={450}
                                                       priority
+                                                      style={{ objectFit: 'cover' }}
                                                     />
                                                 </div>
-                                                <div className="team-two__social">
+                                                <div className="team-two__social" style={{ background: 'rgba(0,0,0,0.5)', padding: '10px 5px', borderRadius: '15px', backdropFilter: 'blur(4px)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px' }}>
                                                     <Link href="#"><span className="icon-facebook"></span></Link>
                                                     <Link href="#"><span className="icon-dribble"></span></Link>
-
                                                     <Link href="#"><span className="icon-linkedin"></span></Link>
                                                 </div>
                                                 <div className="team-two__title-box">

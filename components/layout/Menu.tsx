@@ -1,6 +1,5 @@
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 
 export default function MainMenu() {
   const pathname = usePathname();

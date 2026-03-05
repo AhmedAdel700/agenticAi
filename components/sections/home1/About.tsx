@@ -123,12 +123,12 @@ export default function About() {
                                 <div className="about-two__experience-box">
                                     <div className="about-two__experience-count-box">
                                         <h3 className="odometer">
-                                            <CountUp end={15} duration={2} />
+                                            24/7
                                         </h3>
                                         <span></span>
                                     </div>
                                     <p className="about-two__experience-text">
-                                        Years of<br />Expertise
+                                        Automated<br />Focus
                                     </p>
                                 </div>
                                 <div className="about-two__call-box">

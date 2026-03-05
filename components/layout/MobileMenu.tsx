@@ -1,8 +1,7 @@
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/navigation";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 
 type MobileMenuProps = {
   isSidebar: boolean;

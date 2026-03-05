@@ -1,6 +1,12 @@
-// next.config.js
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import createNextIntlPlugin from "next-intl/plugin";
+import type { NextConfig } from "next";
+
+const withNextIntl = createNextIntlPlugin();
+
+const nextConfig: NextConfig = {
+  experimental: {
+    turbo: {},
+  },
   compiler: {
     removeConsole: true,
   },
@@ -14,4 +20,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default withNextIntl(nextConfig);

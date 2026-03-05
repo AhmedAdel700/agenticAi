@@ -9,9 +9,9 @@ export default function About() {
     <>
         <section className="about-four">
             <div className="about-four__bg-shape"
-                style={{ backgroundImage: "url(https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?q=80&w=1600&auto=format&fit=crop)" }}></div>
+                style={{ backgroundImage: "url(/assets/images/shapes/about-four-bg-shape.png)" }}></div>
             <div className="about-four__bg-shape-2"
-                style={{ backgroundImage: "url(https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1600&auto=format&fit=crop)" }}></div>
+                style={{ backgroundImage: "url(/assets/images/shapes/about-four-bg-shape-2.png)" }}></div>
             <div className="container">
                 <div className="row">
                     <div className="col-xl-6">
@@ -19,114 +19,26 @@ export default function About() {
                             <div className="about-four__img-box">
                             <div className="about-four__img">
                                 <Image
-                                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
-                                  alt="Strategic operations team in a modern office"
+                                  src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop"
+                                  alt="Enterprise control room with data visualizations"
                                   width={480}
                                   height={550}
                                   priority
+                                  style={{ objectFit: 'cover', borderRadius: '40px' }}
                                 />
                             </div>
-                            <div className="about-four__img-2">
-                                <Image
-                                  src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=800&auto=format&fit=crop"
-                                  alt="Autonomous systems dashboard with analytics"
-                                  width={308}
-                                  height={335}
-                                  priority
-                                />
-                            </div>
+
                                 <div className="about-four__experience">
                                     <div className="about-four__experience-inner">
                                         <div className="about-four__experience-count-box">
-                                            <h3 className="odometer"><CountUp end={25} duration={2} /></h3>
+                                            <h3 className="odometer">10x</h3>
                                         </div>
-                                        <p className="about-four__experience-count-text">Years of
-                                            <br /> Experience</p>
+                                        <p className="about-four__experience-count-text">Operational
+                                            <br /> Efficiency</p>
                                     </div>
                                 </div>
                             </div>
-                            <div className="about-four__client-box">
-                                <ul className="about-four__client-img-list list-unstyled">
-                                    <li>
-                                        <div className="about-four__client-img">
-                                            <Image
-                                              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"
-                                              alt="Enterprise leader portrait"
-                                              width={41}
-                                              height={40}
-                                              priority
-                                            />
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="about-four__client-img">
-                                            <Image
-                                              src="https://images.unsplash.com/photo-1550525811-e5869dd03032?q=80&w=200&auto=format&fit=crop"
-                                              alt="Enterprise leader portrait"
-                                              width={41}
-                                              height={40}
-                                              priority
-                                            />
-                                        </div>
-                                    </li>
-                                </ul>
-                                <p className="about-four__client-text"><span className="odometer"><CountUp end={120} duration={3} /></span><span>K</span> Satisfied Client</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-6">
-                        <div className="about-four__right">
-                            <div className="section-title text-left sec-title-animation animation-style2">
-                                <div className="section-title__tagline-box">
-                                    <div className="section-title__tagline-shape-1"></div>
-                                    <span className="section-title__tagline">Our Mission</span>
-                                    <div className="section-title__tagline-shape-2"></div>
-                                </div>
-                                <AnimatedTitle>
-                                <h2 className="section-title__title title-animation">
-                                    Our Mission<br />
-                                    <span>Engineering autonomous operating systems</span>
-                                </h2>
-                                </AnimatedTitle>
-                            </div>
-                            <p className="about-four__text">
-                                Leveraging distributed machine intelligence and resilient architecture to drive non-linear
-                                growth and operational supremacy.
-                            </p>
-                            <div className="about-four__points-box">
-                                <ul className="about-four__points-list list-unstyled">
-                                    <li>
-                                        <div className="icon">
-                                            <span className="icon-tick-inside-circle"></span>
-                                        </div>
-                                        <p>Manages complex workflows<br />autonomously</p>
-                                    </li>
-                                    <li>
-                                        <div className="icon">
-                                            <span className="icon-tick-inside-circle"></span>
-                                        </div>
-                                        <p>Enforces governance without<br />manual oversight</p>
-                                    </li>
-                                </ul>
-                                <ul className="about-four__points-list about-four__points-list-2 list-unstyled">
-                                    <li>
-                                        <div className="icon">
-                                            <span className="icon-tick-inside-circle"></span>
-                                        </div>
-                                        <p>Operates continuously with<br />full audit compliance</p>
-                                    </li>
-                                    <li>
-                                        <div className="about-four__points-list-img">
-                                            <Image src="/assets/images/resources/about-four-points-list-img.jpg" alt="Image" width={60} height={60} priority />
-                                        </div>
-                                        <div className="about-four__points-list-content">
-                                            <h5>Executive Leadership</h5>
-                                            <p>Agentic AI</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <ul className="about-four__points-2 list-unstyled">
+                            <ul className="about-four__points-2 list-unstyled" style={{ marginTop: '40px' }}>
                                 <li>
                                     <div className="icon">
                                         <span className="icon-technical-support"></span>
@@ -148,6 +60,104 @@ export default function About() {
                                     </div>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                    <div className="col-xl-6">
+                        <div className="about-four__right">
+                            <div className="section-title text-left sec-title-animation animation-style2">
+                                <div className="section-title__tagline-box">
+                                    <div className="section-title__tagline-shape-1"></div>
+                                    <span className="section-title__tagline">Our Mission</span>
+                                    <div className="section-title__tagline-shape-2"></div>
+                                </div>
+                                <AnimatedTitle>
+                                <h2 className="section-title__title title-animation">
+                                    Engineering Autonomous Systems<br />
+                                    <span>That Execute Real Work</span>
+                                </h2>
+                                </AnimatedTitle>
+                            </div>
+                            <p className="about-four__text" style={{ 
+                                padding: '30px', 
+                                background: 'rgba(255, 255, 255, 0.03)', 
+                                backdropFilter: 'blur(15px)', 
+                                borderRadius: '30px', 
+                                border: '1px solid rgba(255, 255, 255, 0.08)',
+                                boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+                                marginBottom: '30px'
+                            }}>
+                                We transform enterprise operations by engineering autonomous systems that execute real work — not just provide recommendations. Our agents handle accounting, stakeholder management, compliance, and operational workflows independently, so your teams can focus on strategy.
+                            </p>
+                            <div className="about-four__points-box">
+                                <ul className="about-four__points-list list-unstyled" style={{ display: 'flex', flexDirection: 'column', gap: '8px', margin: 0, padding: 0 }}>
+                                    <li style={{ 
+                                        padding: '12px 25px', 
+                                        background: 'rgba(255, 255, 255, 0.03)', 
+                                        backdropFilter: 'blur(12px)', 
+                                        borderRadius: '20px', 
+                                        border: '1px solid rgba(255, 255, 255, 0.06)',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        width: '100%',
+                                        margin: 0
+                                    }}>
+                                        <div className="icon" style={{ marginBottom: 0 }}>
+                                            <span className="icon-tick-inside-circle"></span>
+                                        </div>
+                                        <p style={{ margin: 0 }}>Manages complex workflows<br />autonomously</p>
+                                    </li>
+                                    <li style={{ 
+                                        padding: '12px 25px', 
+                                        background: 'rgba(255, 255, 255, 0.03)', 
+                                        backdropFilter: 'blur(12px)', 
+                                        borderRadius: '20px', 
+                                        border: '1px solid rgba(255, 255, 255, 0.06)',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        width: '100%',
+                                        margin: 0
+                                    }}>
+                                        <div className="icon" style={{ marginBottom: 0 }}>
+                                            <span className="icon-tick-inside-circle"></span>
+                                        </div>
+                                        <p style={{ margin: 0 }}>Enforces governance without<br />manual oversight</p>
+                                    </li>
+                                    <li style={{ 
+                                        padding: '12px 25px', 
+                                        background: 'rgba(255, 255, 255, 0.03)', 
+                                        backdropFilter: 'blur(12px)', 
+                                        borderRadius: '20px', 
+                                        border: '1px solid rgba(255, 255, 255, 0.06)',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        width: '100%',
+                                        margin: 0
+                                    }}>
+                                        <div className="icon" style={{ marginBottom: 0 }}>
+                                            <span className="icon-tick-inside-circle"></span>
+                                        </div>
+                                        <p style={{ margin: 0 }}>Operates continuously with<br />full audit compliance</p>
+                                    </li>
+                                    <li style={{ 
+                                        marginTop: '4px',
+                                        padding: '20px 25px', 
+                                        background: 'rgba(0, 163, 255, 0.05)', 
+                                        backdropFilter: 'blur(10px)', 
+                                        borderRadius: '24px', 
+                                        border: '1px solid rgba(0, 163, 255, 0.2)',
+                                        width: '100%',
+                                        marginLeft: 0,
+                                        marginRight: 0,
+                                        marginBottom: 0
+                                    }}>
+                                        <div className="about-four__points-list-content">
+                                            <p style={{ margin: 0, color: '#fff', fontSize: '16px', fontWeight: '500', lineHeight: '1.6' }}>
+                                                Founded in 2025 in Abu Dhabi, <span style={{ color: 'var(--thm-primary)' }}>Agentic AI</span> is an AG Group company building production-grade AI operating layers.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

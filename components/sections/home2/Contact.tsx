@@ -8,14 +8,53 @@ export default function Contact() {
 
   return (
     <>
-        <section className="contact-one" id="contact">
-            <div className="contact-one__bg-shape"
-                style={{ backgroundImage: "url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1600&auto=format&fit=crop)" }}></div>
-            <div className="container">
+        <section className="contact-one" id="contact" style={{ position: 'relative', overflow: 'hidden' }}>
+            {/* Background Effects */}
+            <div className="about-four__bg-shape"
+                style={{ backgroundImage: "url(/assets/images/shapes/about-four-bg-shape.png)", position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.4, pointerEvents: 'none' }}></div>
+            <div className="about-four__bg-shape-2"
+                style={{ backgroundImage: "url(/assets/images/shapes/about-four-bg-shape-2.png)", position: 'absolute', top: 0, right: 0, width: '100%', height: '100%', opacity: 0.4, pointerEvents: 'none' }}></div>
+            
+            {/* Custom Glow Effects */}
+            <div style={{ 
+                position: 'absolute', 
+                top: '20%', 
+                left: '10%', 
+                width: '400px', 
+                height: '400px', 
+                background: 'radial-gradient(circle, rgba(0, 163, 255, 0.15) 0%, rgba(0, 163, 255, 0) 70%)', 
+                filter: 'blur(60px)', 
+                zIndex: 0,
+                pointerEvents: 'none'
+            }}></div>
+            <div style={{ 
+                position: 'absolute', 
+                bottom: '10%', 
+                right: '5%', 
+                width: '500px', 
+                height: '500px', 
+                background: 'radial-gradient(circle, rgba(0, 163, 255, 0.1) 0%, rgba(0, 163, 255, 0) 70%)', 
+                filter: 'blur(80px)', 
+                zIndex: 0,
+                pointerEvents: 'none'
+            }}></div>
+
+            <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                 <div className="row">
-                    <div className="col-xl-6 col-lg-6">
+                    <div className="col-xl-6 col-lg-6" style={{ display: 'flex' }}>
                         <div className="contact-one__left wow slideInLeft" data-wow-delay="100ms"
-                            data-wow-duration="2500ms">
+                            data-wow-duration="2500ms" style={{ 
+                                padding: '40px', 
+                                background: 'rgba(255, 255, 255, 0.03)', 
+                                backdropFilter: 'blur(15px)', 
+                                borderRadius: '30px', 
+                                border: '1px solid rgba(255, 255, 255, 0.08)',
+                                boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+                                height: '100%',
+                                width: '100%',
+                                display: 'flex',
+                                flexDirection: 'column'
+                            }}>
                             <div className="contact-one__left-shape-1"></div>
                             <div className="contact-one__left-shape-2"></div>
                             <h3 className="contact-one__from-title">How Can We Help You?</h3>
@@ -23,8 +62,19 @@ export default function Contact() {
                             <div className="result"></div>
                         </div>
                     </div>
-                    <div className="col-xl-6 col-lg-6">
-                        <div className="contact-one__right">
+                    <div className="col-xl-6 col-lg-6" style={{ display: 'flex' }}>
+                        <div className="contact-one__right" style={{ 
+                                padding: '40px', 
+                                background: 'rgba(255, 255, 255, 0.03)', 
+                                backdropFilter: 'blur(15px)', 
+                                borderRadius: '30px', 
+                                border: '1px solid rgba(255, 255, 255, 0.08)',
+                                boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+                                height: '100%',
+                                width: '100%',
+                                display: 'flex',
+                                flexDirection: 'column'
+                            }}>
                             <div className="section-title text-left sec-title-animation animation-style2">
                             <div className="section-title__tagline-box">
                                 <div className="section-title__tagline-shape-1"></div>
