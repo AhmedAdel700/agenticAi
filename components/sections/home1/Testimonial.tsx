@@ -79,7 +79,7 @@ export default function Testimonial() {
                                         <span className="icon-pointed-star"></span>
                                         <span className="icon-pointed-star"></span>
                                     </div>
-                                    <p className="testimonial-two__text">"Agentic Ai has revolutionized our document processing workflows. The speed and accuracy of their autonomous agents are truly institutional-grade for Abu Dhabi."</p>
+                                    <p className="testimonial-two__text">&quot;Agentic Ai has revolutionized our document processing workflows. The speed and accuracy of their autonomous agents are truly institutional-grade for Abu Dhabi.&quot;</p>
                                 </div>
                                 <div className="testimonial-two__client-info">
                                     <div className="testimonial-two__client-img">
@@ -107,7 +107,7 @@ export default function Testimonial() {
                                         <span className="icon-pointed-star"></span>
                                         <span className="icon-pointed-star"></span>
                                     </div>
-                                    <p className="testimonial-two__text">"The multi-agent orchestration provided by Agentic Ai is a game-changer for our operational efficiency across the GCC. Their systems actually execute work."</p>
+                                    <p className="testimonial-two__text">&quot;The multi-agent orchestration provided by Agentic Ai is a game-changer for our operational efficiency across the GCC. Their systems actually execute work.&quot;</p>
                                 </div>
                                 <div className="testimonial-two__client-info">
                                     <div className="testimonial-two__client-img">
@@ -135,7 +135,7 @@ export default function Testimonial() {
                                         <span className="icon-pointed-star"></span>
                                         <span className="icon-pointed-star"></span>
                                     </div>
-                                    <p className="testimonial-two__text">"Ensuring UAE regulatory compliance is critical for us. Agentic Ai's built-in governance models made the transition to autonomous AI seamless and secure."</p>
+                                    <p className="testimonial-two__text">&quot;Ensuring UAE regulatory compliance is critical for us. Agentic Ai&apos;s built-in governance models made the transition to autonomous AI seamless and secure.&quot;</p>
                                 </div>
                                 <div className="testimonial-two__client-info">
                                     <div className="testimonial-two__client-img">
@@ -163,7 +163,7 @@ export default function Testimonial() {
                                         <span className="icon-pointed-star"></span>
                                         <span className="icon-pointed-star"></span>
                                     </div>
-                                    <p className="testimonial-two__text">"The capability transfer we received was outstanding. Agentic Ai didn't just give us a tool; they empowered our team to manage our new AI systems confidently."</p>
+                                    <p className="testimonial-two__text">&quot;The capability transfer we received was outstanding. Agentic Ai didn&apos;t just give us a tool; they empowered our team to manage our new AI systems confidently.&quot;</p>
                                 </div>
                                 <div className="testimonial-two__client-info">
                                     <div className="testimonial-two__client-img">

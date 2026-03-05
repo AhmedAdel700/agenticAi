@@ -97,20 +97,39 @@ export default function Banner() {
                                             they execute, govern, and scale without continuous human intervention
                                         </p>
                                         <div className="main-slider-two__badges-list" style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '35px', marginTop: '25px' }}>
+                                            <style jsx>{`
+                                                @keyframes fadeInUpBadge {
+                                                    from {
+                                                        opacity: 0;
+                                                        transform: translateY(20px);
+                                                    }
+                                                    to {
+                                                        opacity: 1;
+                                                        transform: translateY(0);
+                                                    }
+                                                }
+                                                .badge-item {
+                                                    animation: fadeInUpBadge 0.6s ease forwards;
+                                                    opacity: 0;
+                                                }
+                                            `}</style>
                                             {['Private Offices', 'Family Businesses', 'Real Estate', 'Construction', 'Government'].map((badge, index) => (
-                                                <span key={index} style={{
-                                                    padding: '6px 16px',
-                                                    background: 'rgba(255, 255, 255, 0.05)',
-                                                    border: '1px solid rgba(255, 255, 255, 0.15)',
-                                                    borderRadius: '50px',
-                                                    color: 'rgba(255, 255, 255, 0.9)',
-                                                    fontSize: '11px',
-                                                    fontWeight: '600',
-                                                    letterSpacing: '0.08em',
-                                                    textTransform: 'uppercase',
-                                                    backdropFilter: 'blur(4px)',
-                                                    display: 'inline-block'
-                                                }}>
+                                                <span key={index} 
+                                                    className="badge-item"
+                                                    style={{
+                                                        padding: '6px 16px',
+                                                        background: 'rgba(255, 255, 255, 0.05)',
+                                                        border: '1px solid rgba(255, 255, 255, 0.15)',
+                                                        borderRadius: '50px',
+                                                        color: 'rgba(255, 255, 255, 0.9)',
+                                                        fontSize: '11px',
+                                                        fontWeight: '600',
+                                                        letterSpacing: '0.08em',
+                                                        textTransform: 'uppercase',
+                                                        backdropFilter: 'blur(4px)',
+                                                        display: 'inline-block',
+                                                        animationDelay: `${0.8 + index * 0.1}s`
+                                                    }}>
                                                     {badge}
                                                 </span>
                                             ))}
