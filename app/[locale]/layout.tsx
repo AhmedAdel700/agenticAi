@@ -10,7 +10,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import 'swiper/css/effect-fade'
-
 import CustomCursor from "@/components/elements/CustomCursor";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
