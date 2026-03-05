@@ -1,7 +1,7 @@
-
 import { useState } from "react";
 import { Link, usePathname } from "@/i18n/navigation";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 type MobileMenuProps = {
   isSidebar: boolean;
@@ -10,6 +10,7 @@ type MobileMenuProps = {
 
 export default function MobileMenu({ isSidebar, handleMobileMenu }: MobileMenuProps) {
   const pathname = usePathname();
+  const t = useTranslations("menu");
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
 
   const toggleDropdown = (key: number) => {
@@ -56,22 +57,22 @@ export default function MobileMenu({ isSidebar, handleMobileMenu }: MobileMenuPr
             <ul className="main-menu__list">
               <li className={isActive("/") ? "current" : ""}>
                 <Link href="/" onClick={handleMobileMenu}>
-                  Home
+                  {t("home")}
                 </Link>
               </li>
               <li className={isActive("/about") ? "current" : ""}>
                 <Link href="/about" onClick={handleMobileMenu}>
-                  About
+                  {t("about")}
                 </Link>
               </li>
               <li className={isActive("/services") ? "current" : ""}>
                 <Link href="/services" onClick={handleMobileMenu}>
-                  Services
+                  {t("services")}
                 </Link>
               </li>
               <li className={isActive("/contact") ? "current" : ""}>
                 <Link href="/contact" onClick={handleMobileMenu}>
-                  Contact Us
+                  {t("contact")}
                 </Link>
               </li>
             </ul>

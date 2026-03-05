@@ -1,0 +1,106 @@
+
+/* -------------------------------------------------------------------------- */
+/* RTL (Arabic) Overrides
+/* -------------------------------------------------------------------------- */
+
+[lang="ar"] .main-menu-two__contact-list li+li {
+    margin-right: 35px;
+    margin-left: 0;
+}
+
+[lang="ar"] .main-menu-two__contact-list li:before {
+    right: -17.5px;
+    left: auto;
+}
+
+[lang="ar"] .main-menu-two__contact-list li .text {
+    margin-right: 12px;
+    margin-left: 0;
+}
+
+[lang="ar"] .main-menu-two__contact-list li .icon {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Nav gaps - Main Menu */
+[lang="ar"] .main-menu .main-menu__list>li+li,
+[lang="ar"] .sticky-header .main-menu__list>li+li {
+    margin-right: 40px;
+    margin-left: 0;
+}
+
+/* Fix for the first nav item margin in RTL */
+[lang="ar"] .main-menu .main-menu__list>li:first-child,
+[lang="ar"] .sticky-header .main-menu__list>li:first-child {
+    margin-right: 0;
+}
+
+/* Header Right - align switcher */
+[lang="ar"] .main-menu-two__right {
+    flex-direction: row-reverse;
+}
+
+/* Logo flip and alignment */
+[lang="ar"] .main-menu-two__logo {
+    text-align: right;
+}
+
+/* Banner Social Box - Reverted to original left side */
+[lang="ar"] .main-slider-two__social-box {
+    left: -57px;
+    right: auto;
+    transform: rotate(-90deg);
+}
+
+/* Social title spacing in RTL - user requested 25px margin end */
+[lang="ar"] .main-slider-two__social-title {
+    margin-left: 25px; /* In RTL, end is left */
+    margin-right: 0;
+}
+
+/* Banner Content RTL support - Start from the right (flex-start in RTL) */
+[lang="ar"] .main-slider-two__content {
+    text-align: right !important;
+}
+
+[lang="ar"] .main-slider-two__sub-title-box {
+    justify-content: flex-start !important; /* flex-start is Right in RTL */
+}
+
+[lang="ar"] .main-slider-two__badges-list {
+    justify-content: flex-start !important; /* flex-start is Right in RTL */
+}
+
+[lang="ar"] .main-slider-two__btns-box {
+    justify-content: flex-start !important; /* flex-start is Right in RTL */
+}
+
+/* Navigation Line Fixes */
+[lang="ar"] .main-menu .main-menu__list>li>a::before,
+[lang="ar"] .sticky-header .main-menu__list>li>a::before {
+    transform-origin: right center !important;
+}
+
+/* Footer icons fix */
+[lang="ar"] .footer-widget-two__quick-links-list li span.icon-right-arrow-2 {
+    transform: scaleX(-1);
+    margin-left: 10px;
+    margin-right: 0;
+    display: inline-block;
+}
+
+/* General direction for containers in Arabic */
+[lang="ar"] .container {
+    text-align: right;
+}
+
+/* Swiper navigation flip */
+[lang="ar"] .main-slider-two__nav {
+    flex-direction: row-reverse;
+}
+
+/* Icon orientation in top bar */
+[lang="ar"] .main-menu-two__contact-list li .icon i {
+    transform: scaleX(-1);
+}

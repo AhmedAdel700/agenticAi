@@ -1,14 +1,26 @@
 import { getRequestConfig } from "next-intl/server";
 import { routing } from "./routing";
 
-export default getRequestConfig(async ({ locale }) => {
+export default getRequestConfig(async ({ requestLocale }) => {
+  let resolvedLocale = await requestLocale;
+  
   // Ensure we have a valid locale, otherwise fallback to default
-  const activeLocale = locale && routing.locales.includes(locale as any) 
-    ? locale 
+  const activeLocale = resolvedLocale && routing.locales.includes(resolvedLocale as any) 
+    ? resolvedLocale 
     : routing.defaultLocale;
 
-  return {
-    locale: activeLocale,
-    messages: (await import(`../messages/${activeLocale}/home.json`)).default,
-  };
+  try {
+    const messageModule = await import(`@/messages/${activeLocale}/home.json`);
+    const messages = messageModule.default || messageModule;
+    return {
+      locale: activeLocale,
+      messages: messages,
+    };
+  } catch (error) {
+    console.error(`Failed to load messages for locale: ${activeLocale}`, error);
+    return {
+      locale: activeLocale,
+      messages: {},
+    };
+  }
 });

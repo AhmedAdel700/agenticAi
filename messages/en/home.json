@@ -1,1 +1,37 @@
-{}
+{
+  "tagline": "Agentic Ai systems that execute work autonomously for organizations in Abu Dhabi and the GCC",
+  "address": "Bin Butti Building, Al Khalidiya, Abu Dhabi",
+  "contact": "Contact Us",
+  "banner": {
+    "follow_us_text": "Follow Us:",
+    "sub_title": "Agentic Ai for real institutions",
+    "title": "Autonomous Intelligence\nfor Agentic Operations",
+    "text": "We engineer autonomous operating layers on top of your existing systems —\nthey execute, govern, and scale without continuous human intervention",
+    "btn": "Let's Talk",
+    "badges": {
+      "private_offices": "Private Offices",
+      "family_businesses": "Family Businesses",
+      "real_estate": "Real Estate",
+      "construction": "Construction",
+      "government": "Government"
+    }
+  },
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact Us"
+  },
+  "footer": {
+    "contact_info": "Contact Info",
+    "location": "Location",
+    "pages": "Pages",
+    "our_services": "Our Services",
+    "intelligent_agents": "Intelligent Agents",
+    "governance": "Governance & Compliance",
+    "team_enablement": "Team Enablement",
+    "follow_us": "Follow Us",
+    "rights": "All rights reserved",
+    "copyright": "Copyright"
+  }
+}

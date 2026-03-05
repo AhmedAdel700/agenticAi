@@ -4,6 +4,7 @@ import { Space_Grotesk, Marcellus } from "next/font/google";
 import "@/public/assets/css/bootstrap.min.css";
 import "@/public/assets/css/style.css";
 import "@/public/assets/css/responsive.css";
+import "@/public/assets/css/rtl.css";
 
 import "swiper/css";
 import "swiper/css/navigation";
