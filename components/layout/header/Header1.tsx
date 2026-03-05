@@ -2,8 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import MobileMenu from "../MobileMenu";
 import Menu from "../Menu";
-import { useLocale } from "next-intl";
-import { useRouter, usePathname } from "@/i18n/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 // ✅ Define props type
 type Header1Props = {
@@ -14,14 +13,18 @@ type Header1Props = {
 };
 
 export default function Header1({ scroll, handleMobileMenu, handlePopup, handleSidebar }: Header1Props) {
-  const locale = useLocale();
-  const router = useRouter();
   const pathname = usePathname();
+  const router = useRouter();
+
+  // Detect locale from URL path prefix, fallback to 'en'
+  const locale = pathname?.startsWith("/ar") ? "ar" : "en";
 
   const toggleLanguage = (e: React.MouseEvent) => {
     e.preventDefault();
     const nextLocale = locale === "en" ? "ar" : "en";
-    router.replace(pathname, { locale: nextLocale });
+    // Strip current locale prefix if any, then prepend new locale
+    const pathWithoutLocale = pathname?.replace(/^\/(en|ar)/, "") || "/";
+    router.push(`/${nextLocale}${pathWithoutLocale}`);
   };
 
   return (
