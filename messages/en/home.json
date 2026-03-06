@@ -1,10 +1,10 @@
 {
-  "tagline": "Agentic Ai systems that execute work autonomously for organizations in Abu Dhabi and the GCC",
+  "tagline": "Agentic AI systems that execute work autonomously for organizations in Abu Dhabi and the GCC",
   "address": "Bin Butti Building, Al Khalidiya, Abu Dhabi",
   "contact": "Contact Us",
   "banner": {
     "follow_us_text": "Follow Us:",
-    "sub_title": "Agentic Ai for real institutions",
+    "sub_title": "Agentic AI for real institutions",
     "title": "Autonomous Intelligence\nfor Agentic Operations",
     "text": "We engineer autonomous operating layers on top of your existing systems —\nthey execute, govern, and scale without continuous human intervention",
     "btn": "Let's Talk",
@@ -88,6 +88,7 @@
     "team_enablement": "Team Enablement",
     "follow_us": "Follow Us",
     "rights": "All rights reserved",
+    "back_to_top": "Back to Top",
     "copyright": "Copyright"
   },
   "contact_page": {
@@ -151,5 +152,82 @@
     "role1": "General Manager",
     "manager2": "Kaifi Durani",
     "role2": "IT Manager"
+  },
+  "executive_summary": {
+    "tagline": "Executive Summary",
+    "title_part1": "Agentic AI is not a",
+    "title_part2": "traditional AI company",
+    "text": "We transform enterprise operations by engineering autonomous systems that execute real work — not just provide recommendations. Our agents handle accounting, stakeholder management, compliance, and operational workflows independently, so your teams can focus on strategy",
+    "point1": "Manages complex workflows autonomously",
+    "point2": "Enforces governance without manual oversight",
+    "point3": "Scales operations without proportional headcount",
+    "point4": "Operates continuously with full audit compliance",
+    "experience_count": "24/7",
+    "experience_text1": "Automated",
+    "experience_text2": "Focus",
+    "call_tagline": "Call us for enquiry",
+    "button": "Learn More"
+  },
+  "testimonials": {
+    "tagline": "Testimonials",
+    "title_part1": "Customer Experiences",
+    "title_part2": "That Speak Volumes",
+    "item1": {
+      "text": "Agentic AI has revolutionized our document processing workflows. The speed and accuracy of their autonomous agents are truly institutional-grade for Abu Dhabi.",
+      "name": "Ahmed Al-Mansoori",
+      "role": "Director of Transformation"
+    },
+    "item2": {
+      "text": "The multi-agent orchestration provided by Agentic AI is a game-changer for our operational efficiency across the GCC. Their systems actually execute work.",
+      "name": "Fatima Al-Hashimi",
+      "role": "CTO, Al-Khalidiya Assets"
+    },
+    "item3": {
+      "text": "Ensuring UAE regulatory compliance is critical for us. Agentic AI's built-in governance models made the transition to autonomous AI seamless and secure.",
+      "name": "Khalid bin Rashid",
+      "role": "Head of Compliance"
+    },
+    "item4": {
+      "text": "The capability transfer we received was outstanding. Agentic AI didn't just give us a tool; they empowered our team to manage our new AI systems confidently.",
+      "name": "Mariam Al-Khouri",
+      "role": "Operations Manager"
+    }
+  },
+  "portfolio": {
+    "tagline": "Strategic Impact",
+    "title": "Enterprise Impact",
+    "subtitle": "Real outcomes from autonomous systems",
+    "item1": {
+      "title": "Cost Efficiency",
+      "text": "Measurable reduction in operational expenses within the first deployment cycle."
+    },
+    "item2": {
+      "title": "Speed to Value",
+      "text": "Faster execution of complex workflows — from weeks to minutes."
+    },
+    "item3": {
+      "title": "Continuous Governance",
+      "text": "Consistent, auditable execution across all governed operations."
+    },
+    "item4": {
+      "title": "Team Empowerment",
+      "text": "Free your team to focus on strategy instead of repetitive tasks."
+    },
+    "item5": {
+      "title": "Predictive Analytics",
+      "text": "Anticipate market shifts with real-time autonomous data modeling."
+    },
+    "item6": {
+      "title": "Autonomous Infrastructure",
+      "text": "Self-healing systems that adapt to global demand dynamically."
+    },
+    "item7": {
+      "title": "Intelligent Security",
+      "text": "Continuous monitoring and proactive threat neutralization powered by AI."
+    },
+    "item8": {
+      "title": "Strategic Scalability",
+      "text": "Scale operations worldwide with consistent, automated precision."
+    }
   }
 }

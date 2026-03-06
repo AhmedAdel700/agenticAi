@@ -13,6 +13,8 @@ type AnimatedTitleProps = {
   className?: string;
 };
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function AnimatedTitle({
   children,
   animationStyle = "style2",
@@ -22,17 +24,11 @@ export default function AnimatedTitle({
   const isArabic = locale === 'ar';
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
     if (!titleRef.current) return;
 
     const quote = titleRef.current;
-
-    // For Arabic, we avoid splitting by "chars" because it breaks cursiveness (connected letters).
-    // We split by "lines,words" instead.
     const splitType = isArabic ? "lines,words" : "lines,words,chars";
     const split = new SplitText(quote, { type: splitType, linesClass: "split-line" });
-
     const targets = isArabic ? split.words : split.chars;
 
     gsap.set(quote, { perspective: 400 });
@@ -42,32 +38,32 @@ export default function AnimatedTitle({
         gsap.set(targets, { opacity: 0, y: "90%", rotateX: "-40deg" });
         break;
       case "style2":
-        gsap.set(targets, { opacity: 0, x: isArabic ? 20 : 50 }); // Less harsh movement for words
+        gsap.set(targets, { opacity: 0, x: isArabic ? 20 : 50 });
         break;
       case "style3":
         gsap.set(targets, { opacity: 0 });
         break;
     }
 
-    // Animate on scroll
     const animation = gsap.to(targets, {
       scrollTrigger: {
         trigger: quote,
         start: "top 90%",
+        toggleActions: "play none none none", // Only play once
       },
       x: 0,
       y: 0,
       rotateX: 0,
       opacity: 1,
-      duration: isArabic ? 0.8 : 1, // Faster duration for word blocks
+      duration: isArabic ? 0.8 : 1.2,
       ease: "power2.out",
-      stagger: isArabic ? 0.05 : 0.02, // Slower stagger for words
+      stagger: isArabic ? 0.04 : 0.02,
     });
 
     return () => {
       animation.kill();
+      if (animation.scrollTrigger) animation.scrollTrigger.kill();
       split.revert();
-      ScrollTrigger.getAll().forEach(st => st.kill());
     };
   }, [animationStyle, locale]);
 

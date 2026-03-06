@@ -10,12 +10,16 @@ export default function CustomCursor() {
   const speed = 0.2;
 
   useEffect(() => {
+    let isMounted = true;
+    let rafId: number;
+
     const move = (e: MouseEvent) => {
       target.current.x = e.clientX;
       target.current.y = e.clientY;
     };
 
     const animate = () => {
+      if (!isMounted) return;
       pos.current.x += (target.current.x - pos.current.x) * speed;
       pos.current.y += (target.current.y - pos.current.y) * speed;
 
@@ -27,23 +31,14 @@ export default function CustomCursor() {
       if (cursorRef2.current)
         cursorRef2.current.style.transform = `translate3d(${x}px, ${y}px, 0)`;
 
-      requestAnimationFrame(animate);
+      rafId = requestAnimationFrame(animate);
     };
 
-    // Hover detection
-    const addHover = () => {
-      cursorRef.current?.classList.add("hover");
-      cursorRef2.current?.classList.add("hover");
-    };
-    const removeHover = () => {
-      cursorRef.current?.classList.remove("hover");
-      cursorRef2.current?.classList.remove("hover");
-    };
-
-    // Add hover events for interactive elements
-    const interactiveElements = document.querySelectorAll(
-      "a, button, [data-cursor='hover']"
-    );
+    // Hover detection logic remains the same
+    const interactiveElements = document.querySelectorAll("a, button, [data-cursor='hover']");
+    const addHover = () => { cursorRef.current?.classList.add("hover"); cursorRef2.current?.classList.add("hover"); };
+    const removeHover = () => { cursorRef.current?.classList.remove("hover"); cursorRef2.current?.classList.remove("hover"); };
+    
     interactiveElements.forEach((el) => {
       el.addEventListener("mouseenter", addHover);
       el.addEventListener("mouseleave", removeHover);
@@ -53,6 +48,8 @@ export default function CustomCursor() {
     animate();
 
     return () => {
+      isMounted = false;
+      cancelAnimationFrame(rafId);
       window.removeEventListener("mousemove", move);
       interactiveElements.forEach((el) => {
         el.removeEventListener("mouseenter", addHover);
