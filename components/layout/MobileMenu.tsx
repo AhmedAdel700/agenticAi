@@ -3,6 +3,8 @@ import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 
+import { X, Mail, Phone, Globe } from "lucide-react";
+
 type MobileMenuProps = {
   isSidebar: boolean;
   handleMobileMenu: () => void;
@@ -38,7 +40,7 @@ export default function MobileMenu({ isSidebar, handleMobileMenu }: MobileMenuPr
             className="mobile-nav__close mobile-nav__toggler"
             onClick={handleMobileMenu}
           >
-            <i className="fa fa-times"></i>
+            <X size={24} color="white" />
           </span>
 
 
@@ -83,12 +85,12 @@ export default function MobileMenu({ isSidebar, handleMobileMenu }: MobileMenuPr
 
           {/* Contact Info */}
           <ul className="mobile-nav__contact list-unstyled">
-            <li>
-              <i className="fa fa-envelope" style={{ margin: '0 10px' }}></i>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <Mail size={18} color="white" />
               <Link href="mailto:info@agenticaids.ae">info@agenticaids.ae</Link>
             </li>
-            <li>
-              <i className="fas fa-phone" style={{ margin: '0 10px' }}></i>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <Phone size={18} color="white" />
               <Link href="tel:+971547111343">+971 54 711 1343</Link>
             </li>
           </ul>
@@ -114,6 +116,7 @@ export default function MobileMenu({ isSidebar, handleMobileMenu }: MobileMenuPr
                 borderRadius: "8px"
               }}
             >
+              <Globe size={16} color="white" />
               <span style={{ fontSize: "14px", fontWeight: "600", textTransform: "uppercase" }}>
                 {locale === "en" ? "عربي" : "English"}
               </span>

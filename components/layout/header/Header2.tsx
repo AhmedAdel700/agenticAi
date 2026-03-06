@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import OnepageMobileMenu_One from "../OnepageMobileMenu_One";
 import OnepageMenu_One from "../OnepageMenu_One";
+import { Menu as LucideMenu } from "lucide-react";
 
 // ✅ Define props type
 type Header2Props = {
@@ -58,7 +59,9 @@ export default function Header2({ scroll, handleMobileMenu, handlePopup, handleS
                         </div>
                     </div>
                     <div className="main-menu-two__main-menu-box">
-                        <Link href="#" className="mobile-nav__toggler" onClick={handleMobileMenu}><i className="fa fa-bars"></i></Link>
+                        <Link href="#" className="mobile-nav__toggler" onClick={handleMobileMenu}>
+                            <LucideMenu size={24} color="white" />
+                        </Link>
                         <OnepageMenu_One/>
                     </div>
                     <div className="main-menu-two__right">
@@ -93,7 +96,9 @@ export default function Header2({ scroll, handleMobileMenu, handlePopup, handleS
                         </div>
                     </div>
                     <div className="main-menu-two__main-menu-box">
-                        <Link href="#" className="mobile-nav__toggler" onClick={handleMobileMenu}><i className="fa fa-bars"></i></Link>
+                        <Link href="#" className="mobile-nav__toggler" onClick={handleMobileMenu}>
+                            <LucideMenu size={24} color="white" />
+                        </Link>
                         <OnepageMenu_One/>
                     </div>
                     <div className="main-menu-two__right">

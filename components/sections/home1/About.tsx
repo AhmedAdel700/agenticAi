@@ -23,7 +23,7 @@ export default function About() {
                             <div className="about-two__img-box">
                             <div className="about-two__img">
                                 <Image
-                                  src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop"
+                                  src="/mission_ai.png"
                                   alt="Enterprise control room with data visualizations"
                                   width={495}
                                   height={474}

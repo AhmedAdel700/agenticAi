@@ -5,6 +5,8 @@ import Menu from "../Menu";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
 
+import { Menu as LucideMenu, Globe } from "lucide-react";
+
 // ✅ Define props type
 type Header1Props = {
   scroll: boolean;
@@ -90,7 +92,7 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                   className="mobile-nav__toggler"
                   onClick={handleMobileMenu}
                 >
-                  <i className="fa fa-bars"></i>
+                  <LucideMenu size={24} color="white" />
                 </Link>
                 <Menu />
               </div>
@@ -107,6 +109,7 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                         gap: "8px",
                       }}
                     >
+                      <Globe size={18} color="white" />
                       <span
                         style={{
                           fontSize: "14px",
@@ -149,7 +152,7 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                     className="mobile-nav__toggler"
                     onClick={handleMobileMenu}
                   >
-                    <i className="fa fa-bars"></i>
+                    <LucideMenu size={24} color="white" />
                   </Link>
                   <Menu />
                 </div>
