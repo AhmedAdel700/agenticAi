@@ -268,16 +268,22 @@
     text-align: right !important;
 }
 
-/* Fix for Services Two round text icon circle position */
-[lang="ar"] .services-two__round-text-box,
-[lang="ar"] .services-two__hover-img {
-    display: none !important;
+/* Fix for Services Two round text icon circle position for RTL */
+[lang="ar"] .services-two__curved-circle {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    right: auto !important;
+    width: 150px !important;
+    height: 150px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
-/* Fix for Services Two round text icon circle position */
-[lang="ar"] .services-two__curved-circle {
-    left: 67px !important;
-    right: auto !important;
+[lang="ar"] .services-two__hover-img {
+    left: auto !important;
+    right: 355px !important;
 }
 
 /* Fix for Services Page RTL Overrides */
@@ -286,9 +292,10 @@
     margin-right: 0 !important;
 }
 
-/* Hover img flip for services two - HIDDEN */
+/* Hover img flip for services two */
 [lang="ar"] .services-two__hover-img {
-    display: none !important;
+    -webkit-animation: inactiveImageAnimationRTL 1s forwards ease;
+    animation: inactiveImageAnimationRTL 1s forwards ease;
 }
 
 [lang="ar"] .services-two__services-list-single:hover .services-two__hover-img {

@@ -55,7 +55,7 @@ export default async function RootLayout({
   const fontClass = locale === 'ar' ? cairo.className : spaceGrotesk.className;
 
   return (
-    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} suppressHydrationWarning>
       <body className={`custom-cursor ${fontClass}`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <CustomCursor />
