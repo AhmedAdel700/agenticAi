@@ -75,7 +75,7 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                 <div className="main-menu-two__logo">
                   <Link href="/">
                     <Image
-                      src="/next.svg"
+                      src="/ag-logo.png"
                       alt="Agentic Ai logo"
                       width={120}
                       height={60}
@@ -107,7 +107,6 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                         gap: "8px",
                       }}
                     >
-                    <i className="fa fa-globe"></i>
                       <span
                         style={{
                           fontSize: "14px",
@@ -115,7 +114,7 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                           textTransform: "uppercase",
                         }}
                       >
-                        {locale === "en" ? "AR" : "EN"}
+                        {locale === "en" ? "عربي" : "English"}
                       </span>
                     </Link>
                   </div>
@@ -135,7 +134,7 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                   <div className="main-menu-two__logo">
                     <Link href="/">
                       <Image
-                        src="/next.svg"
+                        src="/ag-logo.png"
                         alt="Agentic Ai logo"
                         width={120}
                         height={60}
@@ -167,7 +166,6 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                           gap: "8px",
                         }}
                       >
-                      <i className="fa fa-globe"></i>
                         <span
                           style={{
                             fontSize: "14px",
@@ -175,7 +173,7 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                             textTransform: "uppercase",
                           }}
                         >
-                          {locale === "en" ? "AR" : "EN"}
+                          {locale === "en" ? "عربي" : "English"}
                         </span>
                       </Link>
                     </div>

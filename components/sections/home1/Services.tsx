@@ -4,6 +4,10 @@ import Image from "next/image";
 import AnimatedTitle from "@/components/elements/AnimatedTitle";
 import { useTranslations, useLocale } from "next-intl";
 
+import service1 from "@/public/service1.png";
+import service2 from "@/public/service2.png";
+import service3 from "@/public/service3.png";
+
 export default function Services() {
   const t = useTranslations("services");
   const locale = useLocale();
@@ -79,15 +83,6 @@ export default function Services() {
                               rotatedChars
                           )}
                       </div>
-                      <div className="services-two__round-icon">
-                      <Image
-                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=200&auto=format&fit=crop"
-                        alt="services icon"
-                        width={42}
-                        height={42}
-                        priority
-                      />
-                      </div>
                       </div>
                   </div>
                   </Link>
@@ -123,7 +118,7 @@ export default function Services() {
                           </div>
                           <div className="services-two__hover-img">
                               <Image
-                                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop"
+                                src={service1}
                                 alt="AI systems orchestrating agentic workflows"
                                 width={250}
                                 height={320}
@@ -161,7 +156,7 @@ export default function Services() {
                           </div>
                           <div className="services-two__hover-img">
                               <Image
-                                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+                                src={service2}
                                 alt="Governance dashboard with compliance metrics"
                                 width={250}
                                 height={320}
@@ -199,7 +194,7 @@ export default function Services() {
                           </div>
                           <div className="services-two__hover-img">
                               <Image
-                                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop"
+                                src={service3}
                                 alt="Leaders reviewing AI strategy together"
                                 width={250}
                                 height={320}

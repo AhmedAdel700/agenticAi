@@ -46,7 +46,7 @@ export default function MobileMenu({ isSidebar, handleMobileMenu }: MobileMenuPr
           <div className="logo-box">
             <Link href="/" aria-label="logo image" onClick={handleMobileMenu}>
               <Image
-                src="/next.svg"
+                src="/ag-logo.png"
                 alt="Agentic Ai logo"
                 width={120}
                 height={60}
@@ -114,9 +114,8 @@ export default function MobileMenu({ isSidebar, handleMobileMenu }: MobileMenuPr
                 borderRadius: "8px"
               }}
             >
-              <i className="fa fa-globe" aria-hidden="true" />
               <span style={{ fontSize: "14px", fontWeight: "600", textTransform: "uppercase" }}>
-                {locale === "en" ? "Arabic" : "English"}
+                {locale === "en" ? "عربي" : "English"}
               </span>
             </Link>
           </div>
