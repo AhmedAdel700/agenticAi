@@ -42,38 +42,6 @@ export default function About() {
                             </div>
                             <div className="about-two__shape-1"></div>
                             </div>
-                            <div className="about-two__client-box">
-                                <ul className={`about-two__client-img-list list-unstyled ${isRtl ? 'ps-0' : ''}`}>
-                                    <li>
-                                    <div className="about-two__client-img">
-                                        <Image
-                                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop"
-                                          alt="Enterprise client portrait"
-                                          width={36}
-                                          height={35}
-                                          priority
-                                        />
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="about-two__client-img">
-                                        <Image
-                                          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop"
-                                          alt="Enterprise client portrait"
-                                          width={36}
-                                          height={35}
-                                          priority
-                                        />
-                                    </div>
-                                    </li>
-                                </ul>
-                            <p className="about-two__client-text">
-                                <span className="odometer">
-                                    <CountUp end={500} duration={2} />
-                                </span>
-                                <span>+</span> {isRtl ? 'تنفيذ عالمي' : 'Global Implementations'}
-                            </p>
-                            </div>
                         </div>
                     </div>
                     <div className="col-xl-6">

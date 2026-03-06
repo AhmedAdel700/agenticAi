@@ -94,9 +94,9 @@ export default function Services() {
               </div>
               <div className="services-two__bottom">
                   <div className="services-two__services-list">
-                      <div className={"services-two__services-list-single services-two__services-list-single-1 " + (isRtl ? "text-right" : "")} style={{ textAlign: isRtl ? 'right' : 'left' }}>
+                      <div className={"services-two__services-list-single services-two__services-list-single-1 " + (isRtl ? "text-right" : "")}>
                           <div className="services-two__count-and-title">
-                              <div className="services-two__count" style={{ marginLeft: isRtl ? '0' : '40px', marginRight: isRtl ? '40px' : '0' }}>01</div>
+                              <div className="services-two__count">01</div>
                               <h3 className="services-two__title">
                                   <Link href="/intelligent-agents">
                                       {t("service1.title").split('\n').map((line, i) => (
@@ -132,9 +132,9 @@ export default function Services() {
                               />
                           </div>
                       </div>
-                      <div className={"services-two__services-list-single " + (isRtl ? "text-right" : "")} style={{ textAlign: isRtl ? 'right' : 'left' }}>
+                      <div className={"services-two__services-list-single " + (isRtl ? "text-right" : "")}>
                           <div className="services-two__count-and-title">
-                              <div className="services-two__count" style={{ marginLeft: isRtl ? '0' : '40px', marginRight: isRtl ? '40px' : '0' }}>02</div>
+                              <div className="services-two__count">02</div>
                               <h3 className="services-two__title">
                                   <Link href="/governance-compliance">
                                       {t("service2.title").split('\n').map((line, i) => (
@@ -170,9 +170,9 @@ export default function Services() {
                               />
                           </div>
                       </div>
-                      <div className={"services-two__services-list-single " + (isRtl ? "text-right" : "")} style={{ textAlign: isRtl ? 'right' : 'left' }}>
+                      <div className={"services-two__services-list-single " + (isRtl ? "text-right" : "")}>
                           <div className="services-two__count-and-title">
-                              <div className="services-two__count" style={{ marginLeft: isRtl ? '0' : '40px', marginRight: isRtl ? '40px' : '0' }}>03</div>
+                              <div className="services-two__count">03</div>
                               <h3 className="services-two__title">
                                   <Link href="/team-enablement">
                                       {t("service3.title").split('\n').map((line, i) => (
