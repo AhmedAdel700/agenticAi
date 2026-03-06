@@ -57,10 +57,30 @@ export default function Footer1() {
                                 <div className="footer-widget-two__quick-links" style={{ textAlign: isRtl ? 'right' : 'left' }}>
                                     <h4 className="footer-widget-two__title">{t("pages")}</h4>
                                     <ul className="footer-widget-two__quick-links-list list-unstyled">
-                                        <li><Link href="/"><span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>{t_root("menu.home")}</Link></li>
-                                        <li><Link href="/about"><span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>{t_root("menu.about")}</Link></li>
-                                        <li><Link href="/services"><span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>{t_root("menu.services")}</Link></li>
-                                        <li><Link href="/contact"><span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>{t_root("menu.contact")}</Link></li>
+                                        <li style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+                                            <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
+                                                <span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>
+                                                {t_root("menu.home")}
+                                            </Link>
+                                        </li>
+                                        <li style={{ display: 'flex', alignItems: 'center', marginBottom: '10px', width: "120px" }}>
+                                            <Link href="/about" style={{ display: 'flex', alignItems: 'center' }}>
+                                                <span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>
+                                                {t_root("menu.about")}
+                                            </Link>
+                                        </li>
+                                        <li style={{ display: 'flex', alignItems: 'center', marginBottom: '10px', width: "120px" }}>
+                                            <Link href="/services" style={{ display: 'flex', alignItems: 'center' }}>
+                                                <span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>
+                                                {t_root("menu.services")}
+                                            </Link>
+                                        </li>
+                                        <li style={{ display: 'flex', alignItems: 'center', marginBottom: '10px', width: "150px" }}>
+                                            <Link href="/contact" style={{ display: 'flex', alignItems: 'center' }}>
+                                                <span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>
+                                                {t_root("menu.contact")}
+                                            </Link>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -68,9 +88,18 @@ export default function Footer1() {
                                 <div className="footer-widget-two__support" style={{ textAlign: isRtl ? 'right' : 'left' }}>
                                     <h4 className="footer-widget-two__title">{t("our_services")}</h4>
                                     <ul className="footer-widget-two__quick-links-list list-unstyled">
-                                        <li style={{ color: 'var(--techguru-gray)', marginBottom: '10px' }}><span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>{t("intelligent_agents")}</li>
-                                        <li style={{ color: 'var(--techguru-gray)', marginBottom: '10px' }}><span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>{t("governance")}</li>
-                                        <li style={{ color: 'var(--techguru-gray)', marginBottom: '10px' }}><span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>{t("team_enablement")}</li>
+                                        <li style={{ display: 'flex', alignItems: 'center', marginBottom: '10px', color: 'var(--techguru-gray)' , width: "200px" }}>
+                                            <span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>
+                                            {t("intelligent_agents")}
+                                        </li>
+                                        <li style={{ display: 'flex', alignItems: 'center', marginBottom: '10px', color: 'var(--techguru-gray)', width: "300px" }}>
+                                            <span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>
+                                            {t("governance")}
+                                        </li>
+                                        <li style={{ display: 'flex', alignItems: 'center', marginBottom: '10px', color: 'var(--techguru-gray)' , width: "200px" }}>
+                                            <span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>
+                                            {t("team_enablement")}
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -78,19 +107,22 @@ export default function Footer1() {
                                 <div className="footer-widget-two__services" style={{ textAlign: isRtl ? 'right' : 'left' }}>
                                     <h4 className="footer-widget-two__title">{t("follow_us")}</h4>
                                     <ul className="footer-widget-two__quick-links-list list-unstyled">
-                                        <li>
-                                            <Link href="https://www.linkedin.com/company/agenticaids/">
-                                                <span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>LinkedIn
+                                        <li style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+                                            <Link href="https://www.linkedin.com/company/agenticaids/" style={{ display: 'flex', alignItems: 'center' }}>
+                                                <span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>
+                                                LinkedIn
                                             </Link>
                                         </li>
-                                        <li>
-                                            <Link href="https://x.com/AgenticAI215463">
-                                                <span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>X (Twitter)
+                                        <li style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+                                            <Link href="https://x.com/AgenticAI215463" style={{ display: 'flex', alignItems: 'center' }}>
+                                                <span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>
+                                                X (Twitter)
                                             </Link>
                                         </li>
-                                        <li>
-                                            <Link href="https://www.instagram.com/ag_entic_ai/">
-                                                <span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>Instagram
+                                        <li style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+                                            <Link href="https://www.instagram.com/ag_entic_ai/" style={{ display: 'flex', alignItems: 'center' }}>
+                                                <span className="icon-right-arrow-2" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block', marginLeft: isRtl ? '10px' : '0', marginRight: isRtl ? '0' : '10px' }}></span>
+                                                Instagram
                                             </Link>
                                         </li>
                                     </ul>
@@ -106,12 +138,12 @@ export default function Footer1() {
                                 <div className="site-footer-two__bottom-inner" style={{ flexDirection: isRtl ? 'row-reverse' : 'row' }}>
                                     <div className="site-footer-two__copyright">
                                         <p className="site-footer-two__copyright-text">
-                                            ⓒ {t("copyright")} {new Date().getFullYear()} <Link href="/#">techguru</Link> {t("rights")}
+                                            ⓒ {t("copyright")} {new Date().getFullYear()} <Link href="/#">Agentic Ai</Link> {t("rights")}
                                         </p>
                                     </div>
-                                    <div className="site-footer-two__social-box" style={{ flexDirection: isRtl ? 'row-reverse' : 'row' }}>
-                                        <h4 className="site-footer-two__social-title">{t("follow_us")}:</h4>
-                                        <div className="site-footer-two__social-box-inner">
+                                    <div className="site-footer-two__social-box" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+                                        <h4 className="site-footer-two__social-title" style={{ margin: 0 }}>{t("follow_us")}:</h4>
+                                        <div className="site-footer-two__social-box-inner" style={{ display: 'flex', gap: '10px' }}>
                                             <Link href="https://www.linkedin.com/company/agenticaids/"><span className="icon-linkedin"></span></Link>
                                             <Link href="https://x.com/AgenticAI215463"><span className="icon-dribble"></span></Link>
                                             <Link href="https://www.instagram.com/ag_entic_ai/"><span className="icon-facebook"></span></Link>

@@ -104,3 +104,233 @@
 [lang="ar"] .main-menu-two__contact-list li .icon i {
     transform: scaleX(-1);
 }
+
+/* Better AR font line height - applying broadly to avoid clipping */
+[lang="ar"], 
+[lang="ar"] p, 
+[lang="ar"] a, 
+[lang="ar"] li, 
+[lang="ar"] span, 
+[lang="ar"] h1, 
+[lang="ar"] h2, 
+[lang="ar"] h3, 
+[lang="ar"] h4, 
+[lang="ar"] h5, 
+[lang="ar"] h6 {
+    line-height: 2 !important; 
+}
+
+/* Phone number direction consistency across the app */
+[href^="tel:"], 
+.phone-number,
+.contact-one__list li .content p a[href^="tel:"],
+.site-footer-two__contact-phone {
+    direction: ltr !important;
+    display: inline-block !important;
+    text-align: start !important; /* Aligns to right in RTL, and left in LTR */
+}
+
+/* Fix for list-unstyled in RTL */
+[lang="ar"] .list-unstyled {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Footer social box order fix for RTL */
+[lang="ar"] .site-footer-two__social-box {
+    display: flex !important;
+    flex-direction: row !important; /* Row flow Right to Left */
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+[lang="ar"] .site-footer-two__social-title {
+    margin-left: 15px !important; /* Space to the left of text (between text and icons) */
+    margin-right: 0 !important;
+    order: 1;
+}
+
+[lang="ar"] .site-footer-two__social-box-inner {
+    order: 2;
+    display: flex;
+    gap: 10px;
+}
+
+/* Footer text wrapping fixes - ensure labels fit their words */
+.site-footer-two__contact-title,
+.footer-widget-two__title,
+.site-footer-two__social-title {
+    white-space: nowrap;
+}
+
+.site-footer-two__contact-info {
+    white-space: nowrap;
+}
+
+/* Fix decorative line in Footer Contact List for RTL */
+[lang="ar"] .site-footer-two__contact-list li:before {
+    left: 169px;
+    right: 0;
+    background: linear-gradient(-90deg, rgba(143, 136, 255, 1) 14%, rgba(143, 136, 255, 0) 100%);
+}
+
+/* Fix misalignment in footer lists */
+.footer-widget-two__quick-links-list li,
+.footer-widget-two__quick-links-list li a {
+    display: flex !important;
+    align-items: center !important;
+    line-height: inherit !important;
+}
+
+/* Global Arrow Rotation for RTL */
+[lang="ar"] .icon-right-arrow,
+[lang="ar"] .icon-right-arrow-1,
+[lang="ar"] .icon-right-arrow-2,
+[lang="ar"] .icon-left-arrow-1,
+[lang="ar"] .icon-left-arrow-2 {
+    transform: scaleX(-1);
+    display: inline-block;
+}
+
+/* Remove default 40px padding from ul in footer for Arabic */
+[lang="ar"] .site-footer ul,
+[lang="ar"] .site-footer-two ul {
+    padding: 0 !important;
+}
+
+/* Services Page RTL Overrides */
+[lang="ar"] .services-four__left {
+    margin-left: 378px;
+    margin-right: 0;
+}
+
+[lang="ar"] .services-four__img-2 {
+    left: -270px;
+    right: auto;
+}
+
+[lang="ar"] .services-four__qualified-box {
+    left: -55px;
+    right: auto;
+}
+
+/* Team Two RTL Overrides */
+[lang="ar"] .team-two__title-box {
+    left: auto !important;
+    right: 25px !important;
+    text-align: right !important;
+}
+
+[lang="ar"] .team-two__social {
+    left: auto !important;
+    right: 25px !important;
+}
+
+[lang="ar"] .team-two__carousel .owl-nav {
+    left: auto !important;
+    right: -555px !important;
+    display: flex !important;
+    flex-direction: row-reverse !important;
+}
+
+/* About Four Mission 10x Badge RTL Fix */
+[lang="ar"] .about-four__experience-inner {
+    text-align: right !important;
+    padding-right: 25px !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+}
+
+[lang="ar"] .about-four__experience-inner h3 {
+    margin-bottom: -15px !important; /* Significantly reduce gap */
+    text-align: right !important;
+    width: 100%;
+}
+
+[lang="ar"] .about-four__experience-count-text {
+    text-align: right !important;
+    line-height: 1.1 !important;
+    margin-top: 0 !important;
+}
+
+/* Fix for About Four (Mission) and Team Two title offsets in RTL */
+[lang="ar"] .about-four__right .section-title__title,
+[lang="ar"] .team-two__left .section-title__title {
+    margin-right: 0 !important;
+    margin-left: 0 !important; /* Remove shifting negative margin */
+    text-align: right !important;
+}
+
+/* Fix for Services Page RTL Overrides */
+[lang="ar"] .services-four__right .section-title__title {
+    margin-left: -100px;
+    margin-right: 0;
+    text-align: right !important;
+}
+
+/* Fix for Services Two round text icon circle position */
+[lang="ar"] .services-two__curved-circle {
+    left: 67px;
+    right: auto;
+}
+
+/* Fix for Services Two round text icon circle position */
+[lang="ar"] .services-two__curved-circle {
+    left: 67px !important;
+    right: auto !important;
+}
+
+/* Fix for Services Page RTL Overrides */
+[lang="ar"] .services-four__left {
+    margin-left: 378px !important;
+    margin-right: 0 !important;
+}
+
+/* Hover img flip for services two */
+[lang="ar"] .services-two__hover-img {
+    right: 355px !important;
+    left: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 100 !important;
+    pointer-events: none !important;
+    display: block !important;
+    width: 250px !important;
+    height: 320px !important;
+    -webkit-clip-path: inset(0 0 0 100%);
+    clip-path: inset(0 0 0 100%);
+    -webkit-animation: inactiveImageAnimationRTL 1s forwards ease;
+    animation: inactiveImageAnimationRTL 1s forwards ease;
+}
+
+[lang="ar"] .services-two__services-list-single:hover .services-two__hover-img {
+    -webkit-animation: activeImageAnimationRTL 1s forwards ease;
+    animation: activeImageAnimationRTL 1s forwards ease;
+}
+
+/* 
+   Mirroring LTR logic:
+   - Expand: right-to-left expansion
+   - Exit: right-to-left shrink
+*/
+@keyframes activeImageAnimationRTL {
+    0% {
+        -webkit-clip-path: inset(0 0 0 100%);
+        clip-path: inset(0 0 0 100%);
+    }
+    100% {
+        -webkit-clip-path: inset(0 0 0 0);
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes inactiveImageAnimationRTL {
+    0% {
+        -webkit-clip-path: inset(0 0 0 0);
+        clip-path: inset(0 0 0 0);
+    }
+    100% {
+        -webkit-clip-path: inset(0 100% 0 0);
+        clip-path: inset(0 100% 0 0);
+    }
+}

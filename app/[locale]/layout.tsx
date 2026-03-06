@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Marcellus } from "next/font/google";
+import { Space_Grotesk, Marcellus, Cairo } from "next/font/google";
 
 import "@/public/assets/css/bootstrap.min.css";
 import "@/public/assets/css/style.css";
@@ -17,13 +17,19 @@ import { getMessages } from "next-intl/server";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  weight: ['400', '500', '700'], // available weights
+  weight: ['400', '500', '700'],
   display: 'swap',
 });
 
 const marcellus = Marcellus({
   subsets: ['latin'],
-  weight: '400', // you can choose available weights
+  weight: '400',
+  display: 'swap',
+});
+
+const cairo = Cairo({
+  subsets: ['arabic', 'latin'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 });
 
@@ -46,9 +52,11 @@ export default async function RootLayout({
   const { locale } = await params;
   const messages = await getMessages();
 
+  const fontClass = locale === 'ar' ? cairo.className : spaceGrotesk.className;
+
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-      <body className={`custom-cursor ${spaceGrotesk.className}`}>
+      <body className={`custom-cursor ${fontClass}`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <CustomCursor />
           <div className={marcellus.className}></div>

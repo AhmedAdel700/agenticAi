@@ -1,8 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function ContactForm() {
+  const t = useTranslations("contact_form");
+  const locale = useLocale();
+  const isRtl = locale === 'ar';
 
   const [formData, setFormData] = useState({
     name: "",
@@ -43,10 +47,10 @@ export default function ContactForm() {
 
   return (
 
-  <form className="contact-form-validated contact-one__form" onSubmit={handleSubmit}>
+  <form className="contact-form-validated contact-one__form" onSubmit={handleSubmit} style={{ textAlign: isRtl ? 'right' : 'left' }}>
     <div className="row">
         <div className="col-xl-6 col-lg-6">
-            <h4 className="contact-one__input-title">Full Name</h4>
+            <h4 className="contact-one__input-title">{t("name")}</h4>
             <div className="contact-one__input-box">
                 <div className="contact-one__input-icon">
                   <span className="icon-user-1"></span>
@@ -57,12 +61,13 @@ export default function ContactForm() {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Thomas Alison"
+                placeholder={t("placeholders.name")}
+                style={{ textAlign: isRtl ? 'right' : 'left' }}
                 />
             </div>
         </div>
         <div className="col-xl-6 col-lg-6">
-            <h4 className="contact-one__input-title">Email Address</h4>
+            <h4 className="contact-one__input-title">{t("email")}</h4>
             <div className="contact-one__input-box">
                 <div className="contact-one__input-icon">
                     <span className="icon-email"></span>
@@ -73,12 +78,13 @@ export default function ContactForm() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="thomas@domain.com"
+                placeholder={t("placeholders.email")}
+                style={{ textAlign: isRtl ? 'right' : 'left' }}
                 />
             </div>
         </div>
         <div className="col-xl-6 col-lg-6">
-            <h4 className="contact-one__input-title">Phone Number</h4>
+            <h4 className="contact-one__input-title">{t("phone")}</h4>
             <div className="contact-one__input-box">
                 <div className="contact-one__input-icon">
                     <span className="icon-phone-call"></span>
@@ -89,12 +95,13 @@ export default function ContactForm() {
                 required
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="+12 (00) 123 4567 890"
+                placeholder={t("placeholders.phone")}
+                style={{ direction: 'ltr', textAlign: isRtl ? 'right' : 'left' }}
                 />
             </div>
         </div>
         <div className="col-xl-6 col-lg-6">
-            <h4 className="contact-one__input-title">Subject</h4>
+            <h4 className="contact-one__input-title">{t("subject")}</h4>
             <div className="contact-one__input-box">
               <div className="contact-one__input-icon">
                   <span className="icon-edit"></span>
@@ -105,13 +112,14 @@ export default function ContactForm() {
                 required
                 value={formData.subject}
                 onChange={handleChange}
-                placeholder="Subject"
+                placeholder={t("placeholders.subject")}
+                style={{ textAlign: isRtl ? 'right' : 'left' }}
                 />
             </div>
         </div>
     </div>
     <div className="col-xl-12">
-        <h4 className="contact-one__input-title">Inquiry about </h4>
+        <h4 className="contact-one__input-title">{t("message")}</h4>
         <div className="contact-one__input-box text-message-box">
             <div className="contact-one__input-icon">
                 <span className="icon-edit"></span>
@@ -122,18 +130,21 @@ export default function ContactForm() {
             rows={4}
             value={formData.message}
             onChange={handleChange}
-            placeholder="Write your message"
+            placeholder={t("placeholders.message")}
+            style={{ textAlign: isRtl ? 'right' : 'left' }}
             />
         </div>
         <div className="contact-one__btn-box">
-            <button type="submit" className="thm-btn"><span>Submit
-                    Now</span><i className="icon-right-arrow"></i></button>
+            <button type="submit" className="thm-btn">
+                <span>{t("submit")}</span>
+                <i className="icon-right-arrow" style={{ transform: isRtl ? 'scaleX(-1)' : 'none', display: 'inline-block' }}></i>
+            </button>
         </div>
     </div>
 
-    {status === "loading" && <p>Sending...</p>}
-    {status === "success" && <p>Message sent successfully ✅</p>}
-    {status === "error" && <p>Something went wrong ❌</p>}
+    {status === "loading" && <p>{t("sending")}</p>}
+    {status === "success" && <p>{t("success")}</p>}
+    {status === "error" && <p>{t("error")}</p>}
   </form>
   );
 }

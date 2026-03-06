@@ -144,7 +144,7 @@ export default function Footer1() {
                                 <div className="site-footer__bottom-inner">
                                     <div className="site-footer__copyright">
                                         <p className="site-footer__copyright-text">
-                                            ⓒ Copyright {new Date().getFullYear()} <Link href="#">techguru</Link> All rights reserved
+                                            ⓒ Copyright {new Date().getFullYear()} <Link href="#">Agentic Ai</Link> All rights reserved
                                         </p>
                                     </div>
                                 </div>

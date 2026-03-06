@@ -16,6 +16,62 @@
       "government": "Government"
     }
   },
+  "services": {
+    "tagline": "Our Services",
+    "title": "Services for Institutional-Grade\nAutonomous Systems",
+    "focus": "Core Focus Areas",
+    "scale": "Engineered for Institutional Scale",
+    "circleText": " Our Services • Core Focus •",
+    "service1": {
+      "title": "Intelligent\nAgents",
+      "point1": "Multi-modal agentic AI systems",
+      "point2": "Deep integration with existing platforms",
+      "point3": "Autonomous document processing",
+      "point4": "Intelligent communications handling",
+      "point5": "24/7 execution across workflows",
+      "point6": "Multi-agent orchestration"
+    },
+    "service2": {
+      "title": "Governance &\nCompliance",
+      "point1": "Built-in UAE regulatory alignment",
+      "point2": "Institutional governance by design",
+      "point3": "Comprehensive audit trails",
+      "point4": "Risk-aware decision frameworks",
+      "point5": "Institutional-grade security posture",
+      "point6": "Policy-driven automation"
+    },
+    "service3": {
+      "title": "Team\nEnablement",
+      "point1": "Comprehensive operational training",
+      "point2": "Capability transfer to internal teams",
+      "point3": "Deep system documentation",
+      "point4": "Clear ownership models",
+      "point5": "Post-deployment support options",
+      "point6": "Change management guidance"
+    }
+  },
+  "services_page": {
+    "tagline": "Execution Steps",
+    "title": "Execution Steps",
+    "subtitle": "Engineering the Enterprise Ecosystem",
+    "text": "Leveraging distributed machine intelligence and resilient architecture to drive non-linear growth and operational supremacy.",
+    "step1": {
+      "title": "01. Understand Environment",
+      "desc": "Map existing systems, data flows, regulatory constraints, and operational context specific to your organization"
+    },
+    "step2": {
+      "title": "02. Analyze & Decide",
+      "desc": "Agents assess context, apply business rules, and determine the appropriate action — not just pattern-matching, but reasoning"
+    },
+    "step3": {
+      "title": "03. Execute Autonomously",
+      "desc": "Real actions across enterprise platforms — processing, approving, routing, and completing work with full governance"
+    },
+    "step4": {
+      "title": "04. Learn & Refine",
+      "desc": "Continuous improvement through performance feedback, exception handling, and iterative optimization cycles"
+    }
+  },
   "menu": {
     "home": "Home",
     "about": "About",
@@ -33,5 +89,67 @@
     "follow_us": "Follow Us",
     "rights": "All rights reserved",
     "copyright": "Copyright"
+  },
+  "contact_page": {
+    "tagline": "Contact Us",
+    "title": "Get In Touch",
+    "sub_title": "Start your autonomous journey",
+    "text": "Initiate your transition to an autonomous digital architecture. Our advisors are ready to evaluate your institutional requirements.",
+    "headquarters": "Headquarters",
+    "email_us": "Email Us",
+    "contact": "Contact",
+    "mob": "Mob"
+  },
+  "contact_form": {
+    "help_title": "How Can We Help You?",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "subject": "Subject",
+    "message": "Inquiry about",
+    "submit": "Submit Now",
+    "sending": "Sending...",
+    "success": "Message sent successfully ✅",
+    "error": "Something went wrong ❌",
+    "placeholders": {
+        "name": "Thomas Alison",
+        "email": "thomas@domain.com",
+        "phone": "+12 (00) 123 4567 890",
+        "subject": "Subject",
+        "message": "Write your message"
+    }
+  },
+  "about_page": {
+    "tagline": "About Us"
+  },
+  "about_mission": {
+    "tagline": "Our Mission",
+    "title1": "Engineering Autonomous Systems",
+    "title2": "That Execute Real Work",
+    "text": "We transform enterprise operations by engineering autonomous systems that execute real work — not just provide recommendations. Our agents handle accounting, stakeholder management, compliance, and operational workflows independently, so your teams can focus on strategy.",
+    "efficiency": "Operational Efficiency",
+    "points": {
+      "point1": "Manages complex workflows autonomously",
+      "point2": "Enforces governance without manual oversight",
+      "point3": "Operates continuously with full audit compliance"
+    },
+    "founded": "Founded in 2025 in Abu Dhabi, {brand} is an AG Group company building production-grade AI operating layers.",
+    "solutions1": {
+        "title": "Innovative IT Solutions",
+        "desc": "Stay ahead with cutting-edge technology tailored to your business needs."
+    },
+    "solutions2": {
+        "title": "Cloud Solutions",
+        "desc": "Secure, scalable, and efficient cloud services to power your growth."
+    }
+  },
+  "team_section": {
+    "tagline": "Executive Leadership",
+    "title": "The Architects of\nTransformation",
+    "text": "A specialized cohort of enterprise architects, intelligence engineers, and strategic advisors dedicated to engineering the future of digital operations.",
+    "manager1": "Sahar Gebril",
+    "role1": "General Manager",
+    "manager2": "Kaifi Durani",
+    "role2": "IT Manager"
   }
 }

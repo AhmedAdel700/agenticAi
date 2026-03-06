@@ -3,8 +3,12 @@
 import Link from "next/link";
 import AnimatedTitle from "@/components/elements/AnimatedTitle";
 import ContactForm from "@/components/elements/ContactForm";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function Contact() {
+  const t = useTranslations("contact_page");
+  const locale = useLocale();
+  const isRtl = locale === 'ar';
 
   return (
     <>
@@ -53,11 +57,12 @@ export default function Contact() {
                                 height: '100%',
                                 width: '100%',
                                 display: 'flex',
-                                flexDirection: 'column'
+                                flexDirection: 'column',
+                                textAlign: isRtl ? 'right' : 'left'
                             }}>
                             <div className="contact-one__left-shape-1"></div>
                             <div className="contact-one__left-shape-2"></div>
-                            <h3 className="contact-one__from-title">How Can We Help You?</h3>
+                            <h3 className="contact-one__from-title">{useTranslations("contact_form")("help_title")}</h3>
                             <ContactForm/>
                             <div className="result"></div>
                         </div>
@@ -73,33 +78,33 @@ export default function Contact() {
                                 height: '100%',
                                 width: '100%',
                                 display: 'flex',
-                                flexDirection: 'column'
+                                flexDirection: 'column',
+                                textAlign: isRtl ? 'right' : 'left'
                             }}>
-                            <div className="section-title text-left sec-title-animation animation-style2">
+                            <div className={`section-title ${isRtl ? 'text-right' : 'text-left'} sec-title-animation animation-style2`}>
                             <div className="section-title__tagline-box">
                                 <div className="section-title__tagline-shape-1"></div>
-                                <span className="section-title__tagline">Contact Us</span>
+                                <span className="section-title__tagline">{t("tagline")}</span>
                                 <div className="section-title__tagline-shape-2"></div>
                             </div>
                             <AnimatedTitle>
                             <h2 className="section-title__title title-animation">
-                                Get In Touch<br />
-                                <span>Start your autonomous journey</span>
+                                {t("title")}<br />
+                                <span>{t("sub_title")}</span>
                             </h2>
                             </AnimatedTitle>
                             </div>
                             <p className="contact-one__text">
-                                Initiate your transition to an autonomous digital architecture. Our advisors are ready to
-                                evaluate your institutional requirements.
+                                {t("text")}
                             </p>
-                            <ul className="contact-one__list list-unstyled">
+                            <ul className="contact-one__list list-unstyled" style={{ textAlign: isRtl ? 'right' : 'left' }}>
                                 <li>
                                     <div className="icon">
                                         <span className="icon-pin"></span>
                                     </div>
                                     <div className="content">
-                                        <h4>Headquarters</h4>
-                                        <p>Bin Butti Building, Al Khalidiya,<br />Abu Dhabi</p>
+                                        <h4>{t("headquarters")}</h4>
+                                        <p>{useTranslations()("address")}</p>
                                     </div>
                                 </li>
                                 <li>
@@ -107,7 +112,7 @@ export default function Contact() {
                                         <span className="icon-mail"></span>
                                     </div>
                                     <div className="content">
-                                        <h4>Email Us</h4>
+                                        <h4>{t("email_us")}</h4>
                                         <p><Link href="mailto:info@agenticaids.ae">info@agenticaids.ae</Link></p>
                                     </div>
                                 </li>
@@ -116,8 +121,8 @@ export default function Contact() {
                                         <span className="icon-phone-call"></span>
                                     </div>
                                     <div className="content">
-                                        <h4>Contact</h4>
-                                        <p>Mob: <Link href="tel:+971547111343">+971 54 711 1343</Link></p>
+                                        <h4>{t("contact")}</h4>
+                                        <p>{t("mob")}: <Link href="tel:+971547111343">+971 54 711 1343</Link></p>
                                     </div>
                                 </li>
                             </ul>

@@ -1,17 +1,18 @@
-"use client";
-
 import { useMemo } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import AnimatedTitle from "@/components/elements/AnimatedTitle";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function Services() {
-  const circleText = "&nbsp;Our Services • Core Focus •";
+  const t = useTranslations("services");
+  const locale = useLocale();
+  const isRtl = locale === "ar";
+  const circleText = t("circleText");
 
   // Create React-friendly rotated letters
   const rotatedChars = useMemo(() => {
-    const cleanText = circleText.replace(/&nbsp;/g, " ");
-    const chars = cleanText.split("");
+    const chars = circleText.split("");
     const radius = 73.6;
     const total = chars.length;
     const deg = 360 / total;
@@ -37,27 +38,37 @@ export default function Services() {
         <section className="services-two" id="services">
             <div className="services-two__shape-1"></div>
             <div className="container">
-                <div className="services-two__top">
-                    <div className="section-title text-left sec-title-animation animation-style2">
+                <div className="services-two__top" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '30px' }}>
+                    <div className={`section-title ${isRtl ? 'text-right' : 'text-left'} sec-title-animation animation-style2`} style={{ textAlign: isRtl ? 'right' : 'left', flex: 1 }}>
                         <div className="section-title__tagline-box">
                             <div className="section-title__tagline-shape-1"></div>
-                            <span className="section-title__tagline">Our Services</span>
+                            <span className="section-title__tagline">{t("tagline")}</span>
                             <div className="section-title__tagline-shape-2"></div>
                         </div>
                         <AnimatedTitle>
-                        <h2 className="section-title__title title-animation">
-                            Services for Institutional-Grade<br />
-                            Autonomous Systems<br />
-                            <span>Core Focus Areas</span><br />
-                            <span>Engineered for Institutional Scale</span>
-                        </h2>
+                            <h2 className="section-title__title title-animation" style={{ width: '100%', maxWidth: 'none' }}>
+                                {t("title")}<br />
+                                <span>{t("focus")}</span><br />
+                                <span>{t("scale")}</span>
+                            </h2>
                         </AnimatedTitle>
                     </div>
-                    <Link href="/services" className="services-two__round-text-box">
+                    <Link href="/services" className="services-two__round-text-box" style={{ flexShrink: 0, marginTop: '20px' }}>
                     <div className="services-two__round-text-box-outer">
                         <div className="services-two__round-text-box-inner">
                         <div className="services-two__curved-circle">
-                            {rotatedChars}
+                            {isRtl ? (
+                                <svg viewBox="0 0 150 150" style={{ width: '150px', height: '150px' }}>
+                                    <path id="circlePath" fill="none" d="M 75, 75 m -60, 0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" />
+                                    <text fill="var(--techguru-base)" style={{ fontSize: '14px', fontWeight: '500', fontFamily: 'var(--techguru-font)' }}>
+                                        <textPath href="#circlePath" startOffset="0%">
+                                            {circleText} {circleText}
+                                        </textPath>
+                                    </text>
+                                </svg>
+                            ) : (
+                                rotatedChars
+                            )}
                         </div>
                         <div className="services-two__round-icon">
                             <Image
@@ -74,34 +85,36 @@ export default function Services() {
                 </div>
                 <div className="services-two__bottom">
                     <div className="services-two__services-list">
-                        <div className="services-two__services-list-single services-two__services-list-single-1">
+                        <div className={"services-two__services-list-single services-two__services-list-single-1 " + (isRtl ? "text-right" : "")} style={{ textAlign: isRtl ? 'right' : 'left' }}>
                             <div className="services-two__count-and-title">
-                                <div className="services-two__count">01</div>
+                                <div className="services-two__count" style={{ marginLeft: isRtl ? '20px' : '0', marginRight: isRtl ? '0' : '20px' }}>01</div>
                                 <h3 className="services-two__title">
                                     <Link href="/intelligent-agents">
-                                        Intelligent<br />Agents
+                                        {t("service1.title").split('\n').map((line, i) => (
+                                            <span key={i}>{line}<br /></span>
+                                        ))}
                                     </Link>
                                 </h3>
                             </div>
                             <div className="services-two__service-list-box">
                                 <ul className="services-two__services-list-inner list-unstyled">
-                                    <li>
-                                        <p><span className="icon-plus"></span>Multi-modal agentic AI systems</p>
-                                        <p><span className="icon-plus"></span>Deep integration with existing platforms</p>
+                                    <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service1.point1")}</p>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service1.point2")}</p>
                                     </li>
-                                    <li>
-                                        <p><span className="icon-plus"></span>Autonomous document processing</p>
-                                        <p><span className="icon-plus"></span>Intelligent communications handling</p>
+                                    <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service1.point3")}</p>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service1.point4")}</p>
                                     </li>
-                                    <li>
-                                        <p><span className="icon-plus"></span>24/7 execution across workflows</p>
-                                        <p><span className="icon-plus"></span>Multi-agent orchestration</p>
+                                    <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service1.point5")}</p>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service1.point6")}</p>
                                     </li>
                                 </ul>
                             </div>
                             <div className="services-two__hover-img">
                                 <Image
-                                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop"
+                                  src="/assets/images/services/service1.png"
                                   alt="AI systems orchestrating agentic workflows"
                                   width={250}
                                   height={320}
@@ -110,34 +123,36 @@ export default function Services() {
                                 />
                             </div>
                         </div>
-                        <div className="services-two__services-list-single">
+                        <div className={"services-two__services-list-single " + (isRtl ? "text-right" : "")} style={{ textAlign: isRtl ? 'right' : 'left' }}>
                             <div className="services-two__count-and-title">
-                                <div className="services-two__count">02</div>
+                                <div className="services-two__count" style={{ marginLeft: isRtl ? '20px' : '0', marginRight: isRtl ? '0' : '20px' }}>02</div>
                                 <h3 className="services-two__title">
                                     <Link href="/governance-compliance">
-                                        Governance &amp;<br />Compliance
+                                        {t("service2.title").split('\n').map((line, i) => (
+                                            <span key={i}>{line}<br /></span>
+                                        ))}
                                     </Link>
                                 </h3>
                             </div>
                             <div className="services-two__service-list-box">
                                 <ul className="services-two__services-list-inner list-unstyled">
-                                    <li>
-                                        <p><span className="icon-plus"></span>Built-in UAE regulatory alignment</p>
-                                        <p><span className="icon-plus"></span>Institutional governance by design</p>
+                                    <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service2.point1")}</p>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service2.point2")}</p>
                                     </li>
-                                    <li>
-                                        <p><span className="icon-plus"></span>Comprehensive audit trails</p>
-                                        <p><span className="icon-plus"></span>Risk-aware decision frameworks</p>
+                                    <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service2.point3")}</p>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service2.point4")}</p>
                                     </li>
-                                    <li>
-                                        <p><span className="icon-plus"></span>Institutional-grade security posture</p>
-                                        <p><span className="icon-plus"></span>Policy-driven automation</p>
+                                    <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service2.point5")}</p>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service2.point6")}</p>
                                     </li>
                                 </ul>
                             </div>
                             <div className="services-two__hover-img">
                                 <Image
-                                  src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop"
+                                  src="/assets/images/services/service2.png"
                                   alt="Governance dashboard with compliance metrics"
                                   width={250}
                                   height={320}
@@ -146,34 +161,36 @@ export default function Services() {
                                 />
                             </div>
                         </div>
-                        <div className="services-two__services-list-single">
+                        <div className={"services-two__services-list-single " + (isRtl ? "text-right" : "")} style={{ textAlign: isRtl ? 'right' : 'left' }}>
                             <div className="services-two__count-and-title">
-                                <div className="services-two__count">03</div>
+                                <div className="services-two__count" style={{ marginLeft: isRtl ? '20px' : '0', marginRight: isRtl ? '0' : '20px' }}>03</div>
                                 <h3 className="services-two__title">
                                     <Link href="/team-enablement">
-                                        Team<br />Enablement
+                                        {t("service3.title").split('\n').map((line, i) => (
+                                            <span key={i}>{line}<br /></span>
+                                        ))}
                                     </Link>
                                 </h3>
                             </div>
                             <div className="services-two__service-list-box">
                                 <ul className="services-two__services-list-inner list-unstyled">
-                                    <li>
-                                        <p><span className="icon-plus"></span>Comprehensive operational training</p>
-                                        <p><span className="icon-plus"></span>Capability transfer to internal teams</p>
+                                    <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service3.point1")}</p>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service3.point2")}</p>
                                     </li>
-                                    <li>
-                                        <p><span className="icon-plus"></span>Deep system documentation</p>
-                                        <p><span className="icon-plus"></span>Clear ownership models</p>
+                                    <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service3.point3")}</p>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service3.point4")}</p>
                                     </li>
-                                    <li>
-                                        <p><span className="icon-plus"></span>Post-deployment support options</p>
-                                        <p><span className="icon-plus"></span>Change management guidance</p>
+                                    <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service3.point5")}</p>
+                                        <p><span className={`icon-plus ${isRtl ? 'ms-2' : ''}`}></span>{t("service3.point6")}</p>
                                     </li>
                                 </ul>
                             </div>
                             <div className="services-two__hover-img">
                                 <Image
-                                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop"
+                                  src="/assets/images/services/service3.png"
                                   alt="Leaders reviewing AI strategy together"
                                   width={250}
                                   height={320}
@@ -182,7 +199,6 @@ export default function Services() {
                                 />
                             </div>
                         </div>
-                        {/* Extra UI removed to match available AG services data */}
                     </div>
                 </div>
             </div>
