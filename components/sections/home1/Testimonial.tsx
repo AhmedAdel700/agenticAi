@@ -83,14 +83,14 @@ export default function Testimonial() {
                                             <span className="icon-pointed-star"></span>
                                         </div>
                                         <p className="testimonial-two__text">
-                                            &quot;{t(`${item.key}.text` as any)}&quot;
+                                            &quot;{t(`${item.key}.text` as Parameters<typeof t>[0])}&quot;
                                         </p>
                                     </div>
                                     <div className="testimonial-two__client-info">
                                         <div className="testimonial-two__client-img">
                                             <Image
                                                 src={item.img}
-                                                alt={t(`${item.key}.name` as any)}
+                                                alt={t(`${item.key}.name` as Parameters<typeof t>[0])}
                                                 width={64}
                                                 height={64}
                                                 priority
@@ -99,9 +99,9 @@ export default function Testimonial() {
                                         </div>
                                         <div className="testimonial-two__client-content">
                                             <h4 className="testimonial-two__client-name">
-                                                <Link href="/testimonials">{t(`${item.key}.name` as any)}</Link>
+                                                <Link href="/testimonials">{t(`${item.key}.name` as Parameters<typeof t>[0])}</Link>
                                             </h4>
-                                            <p className="testimonial-two__sub-title">{t(`${item.key}.role` as any)}</p>
+                                            <p className="testimonial-two__sub-title">{t(`${item.key}.role` as Parameters<typeof t>[0])}</p>
                                         </div>
                                     </div>
                                     <div className="testimonial-two__quote">

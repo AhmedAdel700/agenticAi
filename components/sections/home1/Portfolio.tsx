@@ -109,7 +109,7 @@ export default function Portfolio() {
                                                             style={{ backgroundImage: `url(${item.bg})` }}>
                                                         </div>
                                                         <div className="portfolio-two__title">
-                                                            <h3>{t(`${item.key}.title` as any)}</h3>
+                                                            <h3>{t(`${item.key}.title` as Parameters<typeof t>[0])}</h3>
                                                         </div>
                                                         <div className="portfolio-two__content-box">
                                                             <div onClick={() => { setIndex(item.idx); setOpen(true); }} className="portfolio-two__icon">
@@ -118,8 +118,8 @@ export default function Portfolio() {
                                                                 </Link>
                                                             </div>
                                                             <div className={`portfolio-two__title-box${isRtl ? ' text-right' : ''}`}>
-                                                                <h3 className="portfolio-two__title-2">{t(`${item.key}.title` as any)}</h3>
-                                                                <p className="portfolio-two__text">{t(`${item.key}.text` as any)}</p>
+                                                                <h3 className="portfolio-two__title-2">{t(`${item.key}.title` as Parameters<typeof t>[0])}</h3>
+                                                                <p className="portfolio-two__text">{t(`${item.key}.text` as Parameters<typeof t>[0])}</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -142,7 +142,7 @@ export default function Portfolio() {
                                                             style={{ backgroundImage: `url(${item.bg})` }}>
                                                         </div>
                                                         <div className="portfolio-two__title">
-                                                            <h3>{t(`${item.key}.title` as any)}</h3>
+                                                            <h3>{t(`${item.key}.title` as Parameters<typeof t>[0])}</h3>
                                                         </div>
                                                         <div className="portfolio-two__content-box">
                                                             <div onClick={() => { setIndex(item.idx); setOpen(true); }} className="portfolio-two__icon">
@@ -151,8 +151,8 @@ export default function Portfolio() {
                                                                 </Link>
                                                             </div>
                                                             <div className={`portfolio-two__title-box${isRtl ? ' text-right' : ''}`}>
-                                                                <h3 className="portfolio-two__title-2">{t(`${item.key}.title` as any)}</h3>
-                                                                <p className="portfolio-two__text">{t(`${item.key}.text` as any)}</p>
+                                                                <h3 className="portfolio-two__title-2">{t(`${item.key}.title` as Parameters<typeof t>[0])}</h3>
+                                                                <p className="portfolio-two__text">{t(`${item.key}.text` as Parameters<typeof t>[0])}</p>
                                                             </div>
                                                         </div>
                                                     </div>
