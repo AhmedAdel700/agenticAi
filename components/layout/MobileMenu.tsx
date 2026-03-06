@@ -114,7 +114,13 @@ export default function MobileMenu({ isSidebar, handleMobileMenu }: MobileMenuPr
                 borderRadius: "8px"
               }}
             >
-              <i className="fa fa-globe"></i>
+              <Image
+                src="/assets/images/globe.png"
+                alt="Globe"
+                width={20}
+                height={20}
+                style={{ objectFit: 'contain' }}
+              />
               <span style={{ fontSize: "14px", fontWeight: "600", textTransform: "uppercase" }}>
                 {locale === "en" ? "Arabic" : "English"}
               </span>

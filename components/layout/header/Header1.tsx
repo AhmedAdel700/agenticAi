@@ -95,30 +95,30 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                 <Menu />
               </div>
               <div className="main-menu-two__right">
-                <div className="main-menu-two__language-switcher">
-                  <Link
-                    href="#"
-                    onClick={toggleLanguage}
-                    style={{
-                      fontSize: "24px",
-                      color: "var(--techguru-white)",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "8px",
-                    }}
-                  >
-                    <i className="fa fa-globe"></i>
-                    <span
+                  <div className="main-menu-two__language-switcher">
+                    <Link
+                      href="#"
+                      onClick={toggleLanguage}
                       style={{
-                        fontSize: "14px",
-                        fontWeight: "bold",
-                        textTransform: "uppercase",
+                        fontSize: "24px",
+                        color: "var(--techguru-white)",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "8px",
                       }}
                     >
-                      {locale === "en" ? "AR" : "EN"}
-                    </span>
-                  </Link>
-                </div>
+                    <i className="fa fa-globe"></i>
+                      <span
+                        style={{
+                          fontSize: "14px",
+                          fontWeight: "bold",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        {locale === "en" ? "AR" : "EN"}
+                      </span>
+                    </Link>
+                  </div>
               </div>
             </div>
           </div>
@@ -155,30 +155,30 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                   <Menu />
                 </div>
                 <div className="main-menu-two__right">
-                  <div className="main-menu-two__language-switcher">
-                    <Link
-                      href="#"
-                      onClick={toggleLanguage}
-                      style={{
-                        fontSize: "24px",
-                        color: "var(--techguru-white)",
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "8px",
-                      }}
-                    >
-                      <i className="fa fa-globe"></i>
-                      <span
+                    <div className="main-menu-two__language-switcher">
+                      <Link
+                        href="#"
+                        onClick={toggleLanguage}
                         style={{
-                          fontSize: "14px",
-                          fontWeight: "bold",
-                          textTransform: "uppercase",
+                          fontSize: "24px",
+                          color: "var(--techguru-white)",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "8px",
                         }}
                       >
-                        {locale === "en" ? "AR" : "EN"}
-                      </span>
-                    </Link>
-                  </div>
+                      <i className="fa fa-globe"></i>
+                        <span
+                          style={{
+                            fontSize: "14px",
+                            fontWeight: "bold",
+                            textTransform: "uppercase",
+                          }}
+                        >
+                          {locale === "en" ? "AR" : "EN"}
+                        </span>
+                      </Link>
+                    </div>
                 </div>
               </div>
             </div>

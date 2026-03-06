@@ -9,13 +9,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
       : routing.defaultLocale;
 
   try {
-    // Use a relative path so it works reliably in production builds
-    const messageModule = await import(`../messages/${activeLocale}/home.json`);
-    const messages = messageModule.default || messageModule;
-
     return {
       locale: activeLocale,
-      messages,
+      messages: (await import(`../messages/${activeLocale}/home.json`)).default,
     };
   } catch (error) {
     console.error(`Failed to load messages for locale: ${activeLocale}`, error);
