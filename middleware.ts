@@ -4,14 +4,10 @@ import { routing } from "@/i18n/routing";
 export default createMiddleware(routing);
 
 export const config = {
-  // Only match root, locale-prefixed paths, and the 4 main routes
-  // This leaves legacy detail pages (/backup-recovery etc.) untouched
-  matcher: [
-    "/",
-    "/(en|ar)/:path*",
-    "/(en|ar)",
-    "/about",
-    "/services",
-    "/contact",
-  ],
+  // Match all pathnames except for
+  // - /api (API routes)
+  // - /_next (Next.js internals)
+  // - /_static (inside /public)
+  // - all root files inside /public (e.g. /favicon.ico)
+  matcher: ["/((?!api|_next|_static|_vercel|[\\w-]+\\.\\w+).*)"],
 };
