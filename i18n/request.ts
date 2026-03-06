@@ -9,9 +9,15 @@ export default getRequestConfig(async ({ requestLocale }) => {
       : routing.defaultLocale;
 
   try {
+    // Use explicit imports so Vercel trace can statically analyze and bundle the JSON files
+    const messages =
+      activeLocale === "ar"
+        ? (await import("../messages/ar/home.json")).default
+        : (await import("../messages/en/home.json")).default;
+
     return {
       locale: activeLocale,
-      messages: (await import(`../messages/${activeLocale}/home.json`)).default,
+      messages,
     };
   } catch (error) {
     console.error(`Failed to load messages for locale: ${activeLocale}`, error);
