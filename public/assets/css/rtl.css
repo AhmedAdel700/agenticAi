@@ -188,9 +188,21 @@
 [lang="ar"] .icon-right-arrow-2,
 [lang="ar"] .icon-left-arrow-1,
 [lang="ar"] .icon-left-arrow-2 {
-    transform: scaleX(-1);
+    transform: scaleX(-1) !important;
     display: inline-block;
+    transition: none !important; /* Prevent spinning on load/update */
 }
+
+/* Modal / Lightbox Icon Fixes */
+.yarl__button, .yarl__button svg, .yarl__navigation_prev, .yarl__navigation_next {
+    transition: none !important;
+    animation: none !important;
+}
+[lang="ar"] .yarl__navigation_prev, [lang="ar"] .yarl__navigation_next {
+    transform: translateY(-50%) matrix(-1, 0, 0, 1, 0, 0) !important; /* scaleX(-1) but without using same property if needed, but scaleX is fine */
+}
+[lang="ar"] .yarl__navigation_prev { right: 0; left: auto; }
+[lang="ar"] .yarl__navigation_next { left: 0; right: auto; }
 
 /* Remove default 40px padding from ul in footer for Arabic */
 [lang="ar"] .site-footer ul,
@@ -490,7 +502,8 @@
 /* Utility: flip directional icons in RTL */
 .flip-icon {
     display: inline-block;
-    transform: scaleX(-1);
+    transform: scaleX(-1) !important;
+    transition: none !important;
 }
 
 /* Portfolio Two RTL Fixes */

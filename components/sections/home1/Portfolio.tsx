@@ -73,8 +73,23 @@ export default function Portfolio() {
 
     return (
         <>
+            <style>{`
+                .portfolio-two__box li {
+                    transition: flex 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+                }
+                .portfolio-two__box li.active .single-portfolio-two__bg::before,
+                .portfolio-two__box li.active .portfolio-two__content-box {
+                    transition: opacity 0.3s ease !important;
+                }
+                .portfolio-two__box-content {
+                    filter: none !important;
+                }
+                .portfolio-two__shape-2, .portfolio-two__shape-3, .portfolio-two__shape-4 {
+                    display: none !important;
+                }
+            `}</style>
             <section className="portfolio-two" id="portfolio" dir={isRtl ? 'rtl' : 'ltr'}>
-                <div className="portfolio-two__shape-1 float-bob-y">
+                <div className="portfolio-two__shape-1 float-bob-y" style={{ filter: 'none' }}>
                     <Image
                       src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
                       alt="Abstract technology background"
@@ -83,9 +98,6 @@ export default function Portfolio() {
                       priority
                     />
                 </div>
-                <div className="portfolio-two__shape-2"></div>
-                <div className="portfolio-two__shape-3"></div>
-                <div className="portfolio-two__shape-4"></div>
                 <div className="container">
                     <div className={`section-title text-center sec-title-animation animation-style1`}>
                         <div className="section-title__tagline-box">
@@ -109,7 +121,12 @@ export default function Portfolio() {
                                             {slide1Items.map((item, i) => (
                                                 <li key={item.key}
                                                     className={activeIndex === 12 + i ? "active" : ""}
-                                                    onMouseEnter={() => setActiveIndex(12 + i)}>
+                                                    onMouseEnter={() => setActiveIndex(12 + i)}
+                                                    style={{
+                                                        flex: activeIndex === 12 + i ? (isRtl ? '1.5' : '1.9') : '1',
+                                                        transition: 'flex 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                                                        willChange: 'flex'
+                                                    }}>
                                                     <div className="portfolio-two__box-content">
                                                         <div className="single-portfolio-two__bg"
                                                             style={{ backgroundImage: `url(${item.bg})` }}>
@@ -142,7 +159,12 @@ export default function Portfolio() {
                                             {slide2Items.map((item, i) => (
                                                 <li key={item.key}
                                                     className={activeIndex === 16 + i ? "active" : ""}
-                                                    onMouseEnter={() => setActiveIndex(16 + i)}>
+                                                    onMouseEnter={() => setActiveIndex(16 + i)}
+                                                    style={{
+                                                        flex: activeIndex === 16 + i ? (isRtl ? '1.5' : '1.9') : '1',
+                                                        transition: 'flex 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                                                        willChange: 'flex'
+                                                    }}>
                                                     <div className="portfolio-two__box-content">
                                                         <div className="single-portfolio-two__bg"
                                                             style={{ backgroundImage: `url(${item.bg})` }}>
