@@ -80,13 +80,13 @@ export default function Services() {
                           )}
                       </div>
                       <div className="services-two__round-icon">
-                          <Image
-                          src="/assets/images/icon/services-two-round-icon.png"
-                          alt="icon"
-                          width={42}
-                          height={42}
-                          priority
-                          />
+                      <Image
+                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=200&auto=format&fit=crop"
+                        alt="services icon"
+                        width={42}
+                        height={42}
+                        priority
+                      />
                       </div>
                       </div>
                   </div>
@@ -123,7 +123,7 @@ export default function Services() {
                           </div>
                           <div className="services-two__hover-img">
                               <Image
-                                src="/assets/images/services/service1.png"
+                                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop"
                                 alt="AI systems orchestrating agentic workflows"
                                 width={250}
                                 height={320}
@@ -161,7 +161,7 @@ export default function Services() {
                           </div>
                           <div className="services-two__hover-img">
                               <Image
-                                src="/assets/images/services/service2.png"
+                                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
                                 alt="Governance dashboard with compliance metrics"
                                 width={250}
                                 height={320}
@@ -199,7 +199,7 @@ export default function Services() {
                           </div>
                           <div className="services-two__hover-img">
                               <Image
-                                src="/assets/images/services/service3.png"
+                                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop"
                                 alt="Leaders reviewing AI strategy together"
                                 width={250}
                                 height={320}

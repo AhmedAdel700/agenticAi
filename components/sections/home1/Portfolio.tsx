@@ -75,7 +75,13 @@ export default function Portfolio() {
         <>
             <section className="portfolio-two" id="portfolio" dir={isRtl ? 'rtl' : 'ltr'}>
                 <div className="portfolio-two__shape-1 float-bob-y">
-                    <Image src="/assets/images/shapes/portfolio-two-shape-1.png" alt="Image" width={783} height={1104} priority />
+                    <Image
+                      src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
+                      alt="Abstract technology background"
+                      width={783}
+                      height={1104}
+                      priority
+                    />
                 </div>
                 <div className="portfolio-two__shape-2"></div>
                 <div className="portfolio-two__shape-3"></div>

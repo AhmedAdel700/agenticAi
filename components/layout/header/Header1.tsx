@@ -75,8 +75,8 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                 <div className="main-menu-two__logo">
                   <Link href="/">
                     <Image
-                      src="/ag-logo.png"
-                      alt="AG Logo"
+                      src="/next.svg"
+                      alt="Agentic Ai logo"
                       width={120}
                       height={60}
                       priority
@@ -135,8 +135,8 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                   <div className="main-menu-two__logo">
                     <Link href="/">
                       <Image
-                        src="/ag-logo.png"
-                        alt="AG Logo"
+                        src="/next.svg"
+                        alt="Agentic Ai logo"
                         width={120}
                         height={60}
                         priority

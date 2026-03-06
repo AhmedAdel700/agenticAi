@@ -35,7 +35,7 @@ export default function ServicePage() {
                 <div className="services-four__img-box">
                   <div className="services-four__img">
                     <Image
-                      src="/assets/images/services/execution1.png"
+                      src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=900&auto=format&fit=crop"
                       alt="Advanced technology infrastructure"
                       width={360}
                       height={440}
@@ -45,7 +45,7 @@ export default function ServicePage() {
                   </div>
                   <div className="services-four__img-2">
                     <Image
-                      src="/assets/images/services/execution2.png"
+                      src="https://images.unsplash.com/photo-1639322537504-6427a16b0a28?q=80&w=900&auto=format&fit=crop"
                       alt="Data-driven autonomous execution"
                       width={360}
                       height={440}

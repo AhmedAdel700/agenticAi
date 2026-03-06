@@ -14,9 +14,9 @@ export default function About() {
     <>
         <section className="about-four" style={{ textAlign: isRtl ? 'right' : 'left' }}>
             <div className="about-four__bg-shape"
-                style={{ backgroundImage: "url(/assets/images/shapes/about-four-bg-shape.png)" }}></div>
+                style={{ backgroundImage: "url(https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1600&auto=format&fit=crop)" }}></div>
             <div className="about-four__bg-shape-2"
-                style={{ backgroundImage: "url(/assets/images/shapes/about-four-bg-shape-2.png)" }}></div>
+                style={{ backgroundImage: "url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop)" }}></div>
             <div className="container">
                 <div className="row" style={{ flexDirection: isRtl ? 'row-reverse' : 'row' }}>
                     <div className="col-xl-6">
@@ -26,7 +26,7 @@ export default function About() {
                             <div className="about-four__img-box">
                                 <div className="about-four__img">
                                     <Image
-                                      src="/assets/images/about/mission_ai.png"
+                                      src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1100&auto=format&fit=crop"
                                       alt="Enterprise control room with data visualizations"
                                       width={480}
                                       height={550}

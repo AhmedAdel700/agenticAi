@@ -15,9 +15,9 @@ export default function Contact() {
         <section className="contact-one" id="contact" style={{ position: 'relative', overflow: 'hidden' }}>
             {/* Background Effects */}
             <div className="about-four__bg-shape"
-                style={{ backgroundImage: "url(/assets/images/shapes/about-four-bg-shape.png)", position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.4, pointerEvents: 'none' }}></div>
+                style={{ backgroundImage: "url(https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1600&auto=format&fit=crop)", position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.4, pointerEvents: 'none' }}></div>
             <div className="about-four__bg-shape-2"
-                style={{ backgroundImage: "url(/assets/images/shapes/about-four-bg-shape-2.png)", position: 'absolute', top: 0, right: 0, width: '100%', height: '100%', opacity: 0.4, pointerEvents: 'none' }}></div>
+                style={{ backgroundImage: "url(https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600&auto=format&fit=crop)", position: 'absolute', top: 0, right: 0, width: '100%', height: '100%', opacity: 0.4, pointerEvents: 'none' }}></div>
             
             {/* Custom Glow Effects */}
             <div style={{ 

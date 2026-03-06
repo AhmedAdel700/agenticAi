@@ -15,7 +15,13 @@ export default function About() {
         <section className="about-two" id="about" dir={isRtl ? 'rtl' : 'ltr'}>
             <div className="about-two__shape-2"></div>
             <div className="about-two__shape-3">
-                <Image src="/assets/images/shapes/about-two-shape-3.png" alt="Shape" width={560} height={583} priority />
+                <Image
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop"
+                  alt="Decorative abstract background"
+                  width={560}
+                  height={583}
+                  priority
+                />
             </div>
             <div className="container">
                 <div className="row">

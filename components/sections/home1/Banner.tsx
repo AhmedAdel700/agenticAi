@@ -93,10 +93,22 @@ export default function Banner() {
                 <div className="static-overlay">
                     <div className="main-slider-two__shape-1"></div>
                     <div className="main-slider-two__shape-2 float-bob-x">
-                        <Image src="/assets/images/shapes/main-slider-two-shape-2.png" alt="shape" width={588} height={519} priority />
+                        <Image
+                          src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop"
+                          alt="Abstract technology shape"
+                          width={588}
+                          height={519}
+                          priority
+                        />
                     </div>
                     <div className="main-slider-two__shape-3 float-bob-y">
-                        <Image src="/assets/images/shapes/main-slider-two-shape-3.png" alt="shape" width={381} height={582} priority />
+                        <Image
+                          src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=900&auto=format&fit=crop"
+                          alt="Abstract technology shape"
+                          width={381}
+                          height={582}
+                          priority
+                        />
                     </div>
 
                     <div className="main-slider-two__social-box">
