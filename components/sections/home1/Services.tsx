@@ -1,7 +1,9 @@
-import { useMemo } from "react";
+"use client";
+import React, { useMemo } from "react";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import AnimatedTitle from "@/components/elements/AnimatedTitle";
+import { Plus } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 
 import service1 from "@/public/service1.png";
@@ -103,16 +105,16 @@ export default function Services() {
                           <div className="services-two__service-list-box">
                               <ul className="services-two__services-list-inner list-unstyled">
                                   <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service1.point1")}</p>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service1.point2")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service1.point1")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service1.point2")}</p>
                                   </li>
                                   <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service1.point3")}</p>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service1.point4")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service1.point3")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service1.point4")}</p>
                                   </li>
                                   <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service1.point5")}</p>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service1.point6")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service1.point5")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service1.point6")}</p>
                                   </li>
                               </ul>
                           </div>
@@ -141,16 +143,16 @@ export default function Services() {
                           <div className="services-two__service-list-box">
                               <ul className="services-two__services-list-inner list-unstyled">
                                   <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service2.point1")}</p>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service2.point2")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service2.point1")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service2.point2")}</p>
                                   </li>
                                   <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service2.point3")}</p>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service2.point4")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service2.point3")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service2.point4")}</p>
                                   </li>
                                   <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service2.point5")}</p>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service2.point6")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service2.point5")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service2.point6")}</p>
                                   </li>
                               </ul>
                           </div>
@@ -179,16 +181,16 @@ export default function Services() {
                           <div className="services-two__service-list-box">
                               <ul className="services-two__services-list-inner list-unstyled">
                                   <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service3.point1")}</p>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service3.point2")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service3.point1")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service3.point2")}</p>
                                   </li>
                                   <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service3.point3")}</p>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service3.point4")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service3.point3")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service3.point4")}</p>
                                   </li>
                                   <li style={{ textAlign: isRtl ? 'right' : 'left' }}>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service3.point5")}</p>
-                                      <p><span className={`icon-plus ${isRtl ? 'ms-2' : 'me-2'}`}></span>{t("service3.point6")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service3.point5")}</p>
+                                      <p><Plus size={16} className={`${isRtl ? 'ms-2' : 'me-2'}`} />{t("service3.point6")}</p>
                                   </li>
                               </ul>
                           </div>

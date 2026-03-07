@@ -3,8 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import AnimatedTitle from "@/components/elements/AnimatedTitle";
 import ContactForm from "@/components/elements/ContactForm";
+import { Globe } from "lucide-react";
+import { useLocale } from "next-intl";
 
 export default function Contact() {
+  const locale = useLocale();
+  const isRtl = locale === 'ar';
 
   return (
     <>
@@ -93,7 +97,7 @@ export default function Contact() {
                                     </div>
                                     <div className="content">
                                         <span>Email Us</span>
-                                        <p><Link href="mailto:info@domain.com">info@domain.com</Link></p>
+                                        <p><Link href="mailto:info@agenticaids.ae">info@agenticaids.ae</Link></p>
                                     </div>
                                 </li>
                                 <li>
@@ -102,7 +106,7 @@ export default function Contact() {
                                     </div>
                                     <div className="content">
                                         <span>Contact US</span>
-                                        <p><Link href="tel:9900567780">+99 (00) 567 780</Link></p>
+                                        <p><Link href="tel:+971547111343" style={{ direction: 'ltr', width: '100%', textAlign: isRtl ? 'right' : 'left' }}>+971 54 711 1343</Link></p>
                                     </div>
                                 </li>
                                 <li>
@@ -111,7 +115,16 @@ export default function Contact() {
                                     </div>
                                     <div className="content">
                                         <span>Our Address</span>
-                                        <p>1629 N. Dixie Avenue, Kentucky, 42701</p>
+                                        <p style={{ fontSize: '15px', lineHeight: '1.4' }}>Bin Butti Building, Al Khalidiya, Abu Dhabi</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="icon">
+                                        <Globe size={30} color="var(--techguru-base)" />
+                                    </div>
+                                    <div className="content">
+                                        <span>Website</span>
+                                        <p><Link href="https://www.agenticaids.ae" target="_blank" rel="noopener noreferrer">www.agenticaids.ae</Link></p>
                                     </div>
                                 </li>
                             </ul>

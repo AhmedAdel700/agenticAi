@@ -4,8 +4,10 @@
   "contact": "Contact Us",
   "banner": {
     "follow_us_text": "Follow Us:",
-    "sub_title": "Agentic AI for real institutions",
-    "title": "Autonomous Intelligence\nfor Agentic Operations",
+    "sub_title": "Autonomous Intelligence",
+    "sub_title_extra": "First deployment in 45 days",
+    "title": "Agentic AI",
+    "layer": "The Executive Intelligence Layer",
     "text": "We engineer autonomous operating layers on top of your existing systems —\nthey execute, govern, and scale without continuous human intervention",
     "btn": "Let's Talk",
     "badges": {
@@ -50,6 +52,64 @@
       "point6": "Change management guidance"
     }
   },
+  "solutions": {
+    "tagline": "Solutions",
+    "title": "Autonomous Operating Systems",
+    "text": "Purpose-built intelligence layers that manage entire business functions — designed for the way enterprises in the UAE actually operate",
+    "item1": {
+        "title": "Private Office OS",
+        "desc": "Executive scheduling, correspondence workflows, and VVIP stakeholder management — fully autonomous"
+    },
+    "item2": {
+        "title": "Property Management OS",
+        "desc": "Tenant lifecycle management, maintenance coordination, and lease operations handled end-to-end"
+    },
+    "item3": {
+        "title": "Finance & Accounting OS",
+        "desc": "Autonomous bookkeeping, invoice processing, and financial reporting with full audit trails"
+    },
+    "item4": {
+        "title": "Operations OS",
+        "desc": "Resource allocation, visitor management, and facility coordination — running 24/7"
+    }
+  },
+  "methodology": {
+    "tagline": "Execution",
+    "title": "Our Methodology",
+    "subtitle": "A structured six-phase approach designed to deliver reliable autonomous systems — with governance at every step",
+    "step1": {
+        "title": "Discovery & Assessment",
+        "desc": "We map your current systems, workflows, and operational gaps to identify where autonomous execution delivers the most value"
+    },
+    "step2": {
+        "title": "Architecture & Design",
+        "desc": "We design the operating layer — defining agent roles, integration points, governance rules, and deployment architecture"
+    },
+    "step3": {
+        "title": "Engineering & Integration",
+        "desc": "We build production-grade agents and integrate them with your existing enterprise systems and data sources"
+    },
+    "step4": {
+        "title": "Governance & Security",
+        "desc": "Security hardening, compliance verification, and governance controls are embedded — not bolted on after the fact"
+    },
+    "step5": {
+        "title": "Training & Handover",
+        "desc": "Your team is trained to operate, monitor, and extend the autonomous systems with full documentation"
+    },
+    "step6": {
+        "title": "Deployment & Optimization",
+        "desc": "Structured production launch with continuous monitoring, performance tuning, and iterative improvement"
+    },
+    "stats_1_title": "45 Days",
+    "stats_1_text": "First Production Deployment",
+    "stats_2_title": "24/7",
+    "stats_2_text": "Autonomous Operations",
+    "stats_3_title": "100%",
+    "stats_3_text": "Audit Compliant",
+    "stats_4_title": "Exclusive",
+    "stats_4_text": "Limited Projects Per Year"
+  },
   "services_page": {
     "tagline": "Execution Steps",
     "title": "Execution Steps",
@@ -89,7 +149,9 @@
     "follow_us": "Follow Us",
     "rights": "All rights reserved",
     "back_to_top": "Back to Top",
-    "copyright": "Copyright"
+    "copyright": "Copyright",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_service": "Terms of Service"
   },
   "contact_page": {
     "tagline": "Contact Us",
@@ -234,5 +296,61 @@
     "tagline": "Trusted Partners",
     "title": "Trusted by Industry",
     "subtitle": "Leaders Across the Region"
+  },
+  "why_us": {
+    "tagline": "Institutional Partnership",
+    "title": "Why Work With Us",
+    "subtitle": "What You Can Expect",
+    "point1_title": "Production Grade Systems",
+    "point1_text": "We build production systems — we don't hand over slide decks and leave",
+    "point2_title": "Sovereign Security",
+    "point2_text": "Compliance, audit trails, and sovereign security embedded in every layer",
+    "point3_title": "UAE-Native Expertise",
+    "point3_text": "Deep institutional understanding of the UAE regulatory and cultural landscape",
+    "point4_title": "Capability Transfer",
+    "point4_text": "Your team learns to operate, manage, and extend the systems independently after handover",
+    "expect1": "Measurable cost reduction in operational overhead within the first deployment cycle",
+    "expect2": "Faster execution of complex workflows — from weeks to minutes",
+    "expect3": "Proactive issue resolution before problems reach decision-makers",
+    "expect4": "Consistent, auditable execution across all governed processes"
+  },
+  "privacy_page": {
+    "tagline": "Privacy Policy",
+    "title": "Privacy Policy",
+    "last_updated": "Last updated: February 2025",
+    "point1_title": "1. Information We Collect",
+    "point1_text": "When you use our contact forms or engage with our services, we may collect personal information including your name, email address, phone number, company name, and any message content you provide.",
+    "point2_title": "2. How We Use Your Information",
+    "point2_text": "We use the information collected to respond to your inquiries, provide our services, communicate about our offerings, and improve our website and services. We do not sell your personal information to third parties.",
+    "point3_title": "3. Data Storage & Security",
+    "point3_text": "Your data is stored securely using industry-standard encryption and security practices. We retain your information only as long as necessary to fulfill the purposes outlined in this policy.",
+    "point4_title": "4. Your Rights",
+    "point4_text": "You have the right to access, correct, or delete your personal information. To exercise these rights, please contact us at info@agenticaids.ae.",
+    "point5_title": "5. Contact",
+    "point5_text_pre": "For questions about this privacy policy, contact us at:",
+    "email": "Email",
+    "location": "Location",
+    "location_val": "Al Khalidiya, Abu Dhabi, UAE"
+  },
+  "terms_page": {
+    "tagline": "Terms of Service",
+    "title": "Terms of Service",
+    "last_updated": "Last updated: February 2025",
+    "point1_title": "1. Services",
+    "point1_text": "Agentic AI provides AI development services including intelligent agent development, governance and compliance frameworks, and team enablement programs for enterprises in the UAE and GCC region.",
+    "point2_title": "2. Engagement Terms",
+    "point2_text": "All service engagements are subject to individual contracts and statements of work. The terms outlined on this website are general in nature and may be superseded by specific contractual agreements.",
+    "point3_title": "3. Intellectual Property",
+    "point3_text": "All content on this website, including text, graphics, logos, and designs, is the property of Agentic AI and is protected by applicable intellectual property laws.",
+    "point4_title": "4. Limitation of Liability",
+    "point4_text": "Agentic AI provides this website and its content on an \"as is\" basis. We make no warranties regarding the accuracy or completeness of the information provided.",
+    "point5_title": "5. Governing Law",
+    "point5_text": "These terms are governed by the laws of the United Arab Emirates, specifically the Emirate of Abu Dhabi.",
+    "point6_title": "6. Contact",
+    "point6_text_pre": "For questions about these terms, contact us at:",
+    "email": "Email",
+    "location": "Location",
+    "location_val": "Al Khalidiya, Abu Dhabi, UAE"
   }
 }
+

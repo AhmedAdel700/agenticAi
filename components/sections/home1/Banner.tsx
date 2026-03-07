@@ -6,6 +6,14 @@ import Image from "next/image";
 import "swiper/css/effect-fade";
 import SliderBrand from "./SliderBrand";
 import { useTranslations, useLocale } from "next-intl";
+import { Linkedin, Instagram, Zap } from "lucide-react";
+
+const XIcon = ({ size = 20, color = "currentColor" }) => (
+  <svg width={size} height={size} viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill={color}/>
+  </svg>
+);
+
 export default function Banner() {
     const t = useTranslations("banner");
     const locale = useLocale();
@@ -114,9 +122,9 @@ export default function Banner() {
                     <div className="main-slider-two__social-box">
                         <h4 className="main-slider-two__social-title">{t("follow_us_text") || "Follow Us:"}</h4>
                         <div className="main-slider-two__social-box-inner">
-                            <Link href="https://www.linkedin.com/company/agenticaids/"><span className="icon-linkedin"></span></Link>
-                            <Link href="https://x.com/AgenticAI215463"><span className="icon-dribble"></span></Link>
-                            <Link href="https://www.instagram.com/ag_entic_ai/"><span className="icon-facebook"></span></Link>
+                            <Link href="https://www.linkedin.com/company/agenticaids/"><Linkedin size={20} color="white" /></Link>
+                            <Link href="https://x.com/AgenticAI215463"><XIcon size={18} color="white" /></Link>
+                            <Link href="https://www.instagram.com/ag_entic_ai/"><Instagram size={20} color="white" /></Link>
                         </div>
                     </div>
 
@@ -125,32 +133,71 @@ export default function Banner() {
                             <div className="col-xl-12" style={{ textAlign: isRtl ? 'right' : 'left' }}>
                                 <div className="main-slider-two__content">
                                     <div className="banner-text-content-wrapper">
-                                        <div className="main-slider-two__sub-title-box" style={{ justifyContent: isRtl ? 'flex-start' : 'flex-start' }}>
-                                            <p className="main-slider-two__sub-title" style={{ 
-                                                fontWeight: isRtl ? '800' : 'inherit', 
-                                                fontSize: isRtl ? '16px' : '14px',
-                                                lineHeight: isRtl ? '1.2' : 'inherit',
-                                                color: '#fff',
-                                                textTransform: 'none'
-                                            }}>{t("sub_title")}</p>
+                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', marginBottom: '15px', justifyContent: isRtl ? 'flex-start' : 'flex-start' }}>
+                                            <div className="main-slider-two__sub-title-box" style={{ 
+                                                display: 'inline-flex', 
+                                                alignItems: 'center',
+                                                background: 'rgba(255, 255, 255, 0.05)',
+                                                padding: '8px 16px',
+                                                borderRadius: '30px',
+                                                border: '1px solid rgba(255, 255, 255, 0.1)'
+                                            }}>
+                                                <p className="main-slider-two__sub-title" style={{ 
+                                                    fontWeight: isRtl ? '800' : '600', 
+                                                    fontSize: isRtl ? '15px' : '14px',
+                                                    lineHeight: '1',
+                                                    color: '#fff',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.1em',
+                                                    margin: 0
+                                                }}>{t("sub_title")}</p>
+                                            </div>
+                                            
+                                            <div className="main-slider-two__sub-title-box" style={{ 
+                                                display: 'inline-flex', 
+                                                alignItems: 'center',
+                                                background: 'rgba(255, 255, 255, 0.05)',
+                                                padding: '8px 16px',
+                                                borderRadius: '30px',
+                                                border: '1px solid rgba(255, 255, 255, 0.1)'
+                                            }}>
+                                                <p className="main-slider-two__sub-title" style={{ 
+                                                    fontWeight: isRtl ? '800' : '600', 
+                                                    fontSize: isRtl ? '15px' : '14px',
+                                                    lineHeight: '1',
+                                                    color: 'var(--techguru-base)',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.05em',
+                                                    margin: 0
+                                                }}>{t("sub_title_extra")}</p>
+                                            </div>
                                         </div>
                                         <h2 className="main-slider-two__title" style={{
-                                            fontSize: isRtl ? '70px' : '52px',
-                                            fontWeight: isRtl ? '900' : '500',
-                                            lineHeight: '1.2'
+                                            fontSize: isRtl ? 'clamp(60px, 8vw, 100px)' : 'clamp(60px, 8vw, 120px)',
+                                            fontWeight: '900',
+                                            textTransform: 'uppercase',
+                                            lineHeight: '1.1',
+                                            background: 'linear-gradient(90deg, #844584 0%, #BD565A 50%, #DF995A 100%)',
+                                            WebkitBackgroundClip: 'text',
+                                            WebkitTextFillColor: 'transparent',
+                                            color: 'transparent',
+                                            display: 'block',
+                                            width: '100%'
                                         }}>
-                                            {t("title").split('\n').map((line: string, i: number) => (
-                                                <span key={i} style={{ display: 'block' }}>
-                                                    {isRtl ? (
-                                                        <span style={{ color: line.includes('الوكيلة') ? 'var(--techguru-base)' : 'inherit' }}>
-                                                            {line}
-                                                        </span>
-                                                    ) : (
-                                                        i === 1 ? <span>{line}</span> : line
-                                                    )}
-                                                </span>
-                                            ))}
+                                            {t("title")}
                                         </h2>
+                                        <h3 style={{
+                                            fontSize: isRtl ? '30px' : '28px',
+                                            fontWeight: '600',
+                                            color: 'var(--techguru-white)',
+                                            marginTop: '5px',
+                                            marginBottom: '20px',
+                                            letterSpacing: '0.02em',
+                                            display: 'block',
+                                            width: '100%'
+                                        }}>
+                                            {t("layer")}
+                                        </h3>
                                         <p className="main-slider-two__text">
                                             {t("text").split('\n').map((line: string, i: number) => (
                                                 <span key={i}>{line}{i === 0 && <br />}</span>

@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import About from "@/components/sections/InnerSection/About";
 import Team from "@/components/sections/InnerSection/Team";
+import Methodology from "@/components/sections/home1/Methodology";
 import { getTranslations } from "next-intl/server";
 
 export default async function About_Page({ params }: { params: Promise<{ locale: string }> }) {
@@ -10,6 +11,7 @@ export default async function About_Page({ params }: { params: Promise<{ locale:
     return (
         <Layout headerStyle={1} footerStyle={1} breadcrumbTitle={t("tagline")}>
             <About/>
+            <Methodology/>
             <Team/>
         </Layout>
     )

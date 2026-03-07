@@ -1000,7 +1000,28 @@
     color: var(--techguru-white);
 }
 
+[dir="rtl"] .site-footer-two__bottom-inner {
+    flex-direction: row-reverse;
+}
+
+.site-footer-two__copyright-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 5px;
+}
+
 .site-footer-two__copyright-text a:hover {
+    color: var(--techguru-base);
+}
+
+.site-footer-two__legal-link {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+    font-size: 14px;
+}
+
+.site-footer-two__legal-link:hover {
     color: var(--techguru-base);
 }
 
@@ -1019,6 +1040,7 @@
     background: linear-gradient(270deg, #FA5674 0%, #6065D4 100%);
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    margin: 0;
 }
 
 .site-footer-two__social-box-inner {

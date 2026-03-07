@@ -1972,11 +1972,23 @@
     }
 
     .site-footer-two__copyright {
-        margin-bottom: 15px;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-footer-two__copyright-links {
+        justify-content: center;
     }
 
     .site-footer-two__social-box {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .site-footer-two__social-box-inner {
+        justify-content: center;
     }
 
    [lang="ar"] .about-two__right .section-title__title {

@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 
-import { Home, ChevronRight } from "lucide-react";
+import { Home, ChevronRight, ChevronLeft } from "lucide-react";
 
 interface BreadcrumbProps {
   breadcrumbTitle: string;
@@ -31,9 +31,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ breadcrumbTitle })  => {
                                 </Link>
                             </li>
                             <li style={{ display: 'flex', alignItems: 'center', margin: '0 10px' }}>
-                                <ChevronRight 
-                                    size={16} 
-                                />
+                                {isRtl ? <ChevronLeft size={16} /> : <ChevronRight size={16} />}
                             </li>
                             <li>{ breadcrumbTitle }</li>
                         </ul>
