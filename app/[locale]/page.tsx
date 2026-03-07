@@ -1,6 +1,7 @@
 
 import Layout from "@/components/layout/Layout";
 import Banner from "@/components/sections/home1/Banner";
+import PartnerSlider from "@/components/sections/home1/PartnerSlider";
 import Services from "@/components/sections/home1/Services";
 import About from "@/components/sections/home1/About";
 import Portfolio from "@/components/sections/home1/Portfolio";
@@ -10,6 +11,7 @@ export default function Home_One() {
     return (
         <Layout headerStyle={1} footerStyle={1}>
             <Banner/>
+            <PartnerSlider/>
             <Services/>
             <About/>
             <Portfolio/>

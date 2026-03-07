@@ -1,6 +1,7 @@
 @media only screen and (min-width: 1200px) and (max-width: 1319px) {
     .about-one__left .section-title__title br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .counter-one__wrap {
@@ -55,7 +56,8 @@
     }
 
     .about-two__right .section-title__title br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .why-choose-one__left .section-title__title {
@@ -506,7 +508,8 @@
     }
 
     .team-two__text br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .team-two__right {
@@ -1046,7 +1049,9 @@
     }
 
     .about-four__right .section-title__title br {
-        display: none;
+        display: block;
+        content: "";
+        margin-bottom: 0px;
     }
 
     .why-choose-three__single-left {
@@ -1084,7 +1089,8 @@
     }
 
     .team-two__text br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .team-two__right {
@@ -1129,7 +1135,9 @@
     }
 
     .services-four__right .section-title__title br {
-        display: none;
+        display: block;
+        content: "";
+        margin-bottom: 0px;
     }
 
     .blog-page .blog-one__user {
@@ -1327,7 +1335,9 @@
     }
 
     .section-title__title br {
-        display: none;
+        display: block;
+        content: "";
+        margin-bottom: 0px;
     }
 
 
@@ -1353,7 +1363,8 @@
     }
 
     .services-one__text br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .servces-one {
@@ -1424,7 +1435,8 @@
     }
 
     .process-one__text br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .process-one__right {
@@ -1574,7 +1586,8 @@
     }
 
     .newsletter-one__text br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .newsletter-one__contact-input-box {
@@ -1601,7 +1614,8 @@
     }
 
     .site-footer__top-text br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .footer-widget__quick-links {
@@ -1673,7 +1687,9 @@
     }
 
     .about-two__right .section-title__title br {
-        display: none;
+        display: block;
+        content: "";
+        margin-bottom: 0px;
     }
 
     .about-two {
@@ -1749,7 +1765,8 @@
     }
 
     .process-two__text br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .process-two .section-title {
@@ -1809,7 +1826,8 @@
     }
 
     .contact-two__text br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .contact-two__right {
@@ -1967,15 +1985,10 @@
     max-width: 100% !important;
 }
 
-[lang="ar"] .about-two__right .section-title__title span {
-    display: inline-block;
-    margin-top: 8px;
-}
-
-[lang="ar"] .scroll-to-top {
-    right: auto !important;
-    left: 15px !important;
-}
+    .about-two__right .section-title__title span {
+        display: inline-block;
+        margin-top: 8px;
+    }
 
     .about-two__right .section-title__title {
         margin-right: 0;
@@ -2048,7 +2061,8 @@
     }
 
     .cta-one__title br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .faq-one__img-box {
@@ -2114,7 +2128,8 @@
     }
 
     .about-four__right .section-title__title br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .about-four__points-box {
@@ -2166,7 +2181,8 @@
     }
 
     .team-two__text br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .team-two__right {
@@ -2196,7 +2212,8 @@
     }
 
     .services-four__right .section-title__title br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .services-four__points-box li {
@@ -2483,7 +2500,8 @@
     }
 
     .portfolio-details__points-two-single p br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .services-details__left {
@@ -3435,11 +3453,13 @@
     }
 
     .main-slider__title br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .main-slider__text br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .main-slider__btn-and-trustpilot-box {
@@ -3490,11 +3510,13 @@
     }
 
     .main-slider-two__title br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .main-slider-two__text br {
-        display: none;
+        display: block;
+        content: "";
     }
 
     .main-slider-two__btns-box {

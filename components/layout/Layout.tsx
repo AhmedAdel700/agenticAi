@@ -4,6 +4,7 @@
 import Header from "./Header"; // Client component
 import Footer from "./Footer"; // Server component
 import Breadcrumb from "./Breadcrumb";
+import FloatingContact from "../elements/FloatingContact";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -28,6 +29,9 @@ export default function Layout({
 
       {/* Main page content */}
       <main>{children}</main>
+
+      {/* Quick Contact FAB */}
+      <FloatingContact />
 
       {/* Footer (server component) */}
       <Footer style={footerStyle} />

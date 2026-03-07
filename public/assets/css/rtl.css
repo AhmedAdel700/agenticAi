@@ -23,6 +23,11 @@
     margin-right: 0;
 }
 
+[lang="ar"] .scroll-to-top {
+    right: auto !important;
+    left: -12px !important;
+}
+
 /* Nav gaps - Main Menu */
 [lang="ar"] .main-menu .main-menu__list>li+li,
 [lang="ar"] .sticky-header .main-menu__list>li+li {
@@ -100,9 +105,9 @@
     flex-direction: row-reverse;
 }
 
-/* Icon orientation in top bar */
+/* Icon orientation in top bar - removed transform since non-directional icons shouldn't flip */
 [lang="ar"] .main-menu-two__contact-list li .icon i {
-    transform: scaleX(-1);
+    transform: none !important;
 }
 
 /* Better AR font line height - applying broadly to avoid clipping for Arabic characters */
@@ -522,4 +527,24 @@
 /* Services Two RTL: count-and-title should use natural RTL flow (Count on right) */
 [lang="ar"] .services-two__services-list-single .services-two__count-and-title {
     flex-direction: row; 
+}
+
+/* Fix for menu icon flipping in Arabic */
+[lang="ar"] .mobile-nav__toggler,
+[lang="ar"] .mobile-nav__toggler svg {
+    transform: none !important;
+}
+
+/* Global icon fix for RTL - preventing mirror/rotation effects for all standard icons and SVGs */
+[lang="ar"] i:not([class*="arrow"]),
+[lang="ar"] span[class*="icon-"]:not([class*="arrow"]),
+[lang="ar"] svg:not([class*="arrow"]):not(.flip-icon) {
+    transform: none !important;
+    transition: none !important;
+}
+
+/* Force X icon to the left in AR */
+[lang="ar"] .mobile-nav__close {
+    right: auto !important;
+    left: 15px !important;
 }
