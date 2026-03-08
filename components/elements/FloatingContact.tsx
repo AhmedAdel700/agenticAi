@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Phone, X, MessageSquare, MessageCircle } from "lucide-react";
+import { Phone, X, MessageSquare, MessageCircle, Bot } from "lucide-react";
 
 export default function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,6 +38,23 @@ export default function FloatingContact() {
           <Phone size={24} color="white" fill="white" />
           <span className="tooltip">Call Us</span>
         </a>
+
+        {/* Chatbot Button */}
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            // @ts-ignore
+            if (typeof window !== "undefined" && window.Tawk_API) {
+              // @ts-ignore
+              window.Tawk_API.toggle();
+            }
+          }}
+          className="floating-contact__option chatbot"
+          aria-label="Open Chat"
+        >
+          <Bot size={24} color="white" />
+          <span className="tooltip">Chatbot</span>
+        </button>
       </div>
 
       {/* Main Toggle Button */}
@@ -130,6 +147,11 @@ export default function FloatingContact() {
 
         .floating-contact__option.phone {
           background: #3d72fc;
+        }
+
+        .floating-contact__option.chatbot {
+          background: #03a84e; /* Tawk.to custom green */
+          cursor: pointer;
         }
 
         .floating-contact__option:hover {
