@@ -137,10 +137,10 @@ export default function Banner() {
                                             <div className="main-slider-two__sub-title-box" style={{ 
                                                 display: 'inline-flex', 
                                                 alignItems: 'center',
-                                                background: 'rgba(255, 255, 255, 0.05)',
+                                                background: 'rgba(255, 255, 255, 0.08)',
                                                 padding: '8px 16px',
                                                 borderRadius: '30px',
-                                                border: '1px solid rgba(255, 255, 255, 0.1)'
+                                                border: '1px solid rgba(255, 255, 255, 0.5)'
                                             }}>
                                                 <p className="main-slider-two__sub-title" style={{ 
                                                     fontWeight: isRtl ? '800' : '600', 
@@ -156,10 +156,10 @@ export default function Banner() {
                                             <div className="main-slider-two__sub-title-box" style={{ 
                                                 display: 'inline-flex', 
                                                 alignItems: 'center',
-                                                background: 'rgba(255, 255, 255, 0.05)',
+                                                background: 'rgba(255, 255, 255, 0.08)',
                                                 padding: '8px 16px',
                                                 borderRadius: '30px',
-                                                border: '1px solid rgba(255, 255, 255, 0.1)'
+                                                border: '1px solid rgba(255, 255, 255, 0.5)'
                                             }}>
                                                 <p className="main-slider-two__sub-title" style={{ 
                                                     fontWeight: isRtl ? '800' : '600', 
@@ -173,16 +173,17 @@ export default function Banner() {
                                             </div>
                                         </div>
                                         <h2 className="main-slider-two__title" style={{
-                                            fontSize: isRtl ? 'clamp(60px, 8vw, 100px)' : 'clamp(60px, 8vw, 120px)',
+                                            fontSize: isRtl ? 'clamp(32px, 4.5vw, 65px)' : 'clamp(36px, 5vw, 75px)',
                                             fontWeight: '900',
                                             textTransform: 'uppercase',
-                                            lineHeight: '1.1',
+                                            lineHeight: '1.15',
                                             background: 'linear-gradient(90deg, #844584 0%, #BD565A 50%, #DF995A 100%)',
                                             WebkitBackgroundClip: 'text',
                                             WebkitTextFillColor: 'transparent',
                                             color: 'transparent',
                                             display: 'block',
-                                            width: '100%'
+                                            width: '100%',
+                                            marginBottom: '5px'
                                         }}>
                                             {t("title")}
                                         </h2>
@@ -208,7 +209,7 @@ export default function Banner() {
                                                 { key: 'private_offices', default: 'Private Offices' },
                                                 { key: 'family_businesses', default: 'Family Businesses' },
                                                 { key: 'real_estate', default: 'Real Estate' },
-                                                { key: 'construction', default: 'Construction' },
+                                                // { key: 'construction', default: 'Construction' },
                                                 { key: 'government', default: 'Government' }
                                             ].map((badge, index) => (
                                                 <span key={index} 

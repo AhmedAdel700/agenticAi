@@ -79,9 +79,10 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                     <Image
                       src="/ag-logo.png"
                       alt="Agentic Ai logo"
-                      width={120}
-                      height={60}
+                      width={240}
+                      height={50}
                       priority
+                      style={{maxWidth:"100%" , maxHeight:"100%", objectFit:"cover"}}
                     />
                   </Link>
                 </div>
@@ -137,11 +138,12 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                   <div className="main-menu-two__logo">
                     <Link href="/">
                       <Image
-                        src="/ag-logo.png"
-                        alt="Agentic Ai logo"
-                        width={120}
-                        height={60}
-                        priority
+                      src="/ag-logo.png"
+                      alt="Agentic Ai logo"
+                      width={240}
+                      height={50}
+                      priority
+                      style={{maxWidth:"100%" , maxHeight:"100%", objectFit:"cover"}}
                       />
                     </Link>
                   </div>

@@ -48,11 +48,12 @@ export default function MobileMenu({ isSidebar, handleMobileMenu }: MobileMenuPr
           <div className="logo-box">
             <Link href="/" aria-label="logo image" onClick={handleMobileMenu}>
               <Image
-                src="/ag-logo.png"
-                alt="Agentic Ai logo"
-                width={120}
-                height={60}
-                priority
+                      src="/ag-logo.png"
+                      alt="Agentic Ai logo"
+                      width={240}
+                      height={50}
+                      priority
+                      style={{maxWidth:"100%" , maxHeight:"100%", objectFit:"cover"}}
               />
             </Link>
           </div>

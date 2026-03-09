@@ -28,7 +28,7 @@ export default function Footer1() {
                             <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                 <div className="site-footer-two__about">
                                     <div className="site-footer-two__logo" style={{ textAlign: isRtl ? 'right' : 'left' }}>
-                                        <Link href="/"><Image src="/ag-logo.png" alt="Agentic Ai logo" width={120} height={60} priority /></Link>
+                                        <Link href="/"><Image src="/ag-logo.png" alt="Agentic Ai logo" width={300} height={50} priority style={{maxWidth:"100%" , maxHeight:"100%", objectFit:"cover"}} /></Link>
                                     </div>
                                     <ul className="list-unstyled site-footer-two__contact-list" style={{ 
                                         marginTop: '30px', 
