@@ -37,6 +37,13 @@ const cairo = Cairo({
 export const metadata: Metadata = {
   title: "Agentic Ai - Autonomous Intelligence for Institutional Operations",
   description: "Agentic Ai systems that execute work autonomously for organizations in Abu Dhabi and across the GCC.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/assets/images/favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/assets/images/favicons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+  },
 };
 
 export async function generateStaticParams() {

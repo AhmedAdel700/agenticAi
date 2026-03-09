@@ -33,7 +33,7 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
       <header className={`main-header-two ${scroll ? "fixed-header" : ""}`}>
         <div className="main-menu-two__top">
           <div className="main-menu-two__top-inner">
-            <p className="main-menu-two__top-text">
+            <p className="main-menu-two__top-text" style={{ fontSize: "14px" }}>
               {t("tagline")}
             </p>
             <ul className="list-unstyled main-menu-two__contact-list">
@@ -42,7 +42,7 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                   <i className="icon-pin"></i>
                 </div>
                 <div className="text">
-                  <p>{t("address")}</p>
+                  <p style={{ fontSize: "14px" }}>{t("address")}</p>
                 </div>
               </li>
               <li>
@@ -50,7 +50,7 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                   <i className="icon-search-mail"></i>
                 </div>
                 <div className="text">
-                  <p>
+                  <p style={{ fontSize: "14px" }}>
                     <Link href="mailto:info@agenticaids.ae">
                       info@agenticaids.ae
                     </Link>
@@ -62,7 +62,7 @@ export default function Header1({ scroll, handleMobileMenu }: Header1Props) {
                   <i className="icon-phone-call"></i>
                 </div>
                 <div className="text">
-                  <p>
+                  <p style={{ fontSize: "14px" }}>
                     <Link href="tel:+971547111343">+971 54 711 1343</Link>
                   </p>
                 </div>

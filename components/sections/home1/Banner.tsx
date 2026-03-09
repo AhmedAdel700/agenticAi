@@ -1,12 +1,11 @@
 'use client'
-import { Autoplay, Navigation, Pagination, EffectFade } from "swiper/modules"
+import { Autoplay, EffectFade } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import Link from "next/link";
 import Image from "next/image";
 import "swiper/css/effect-fade";
-import SliderBrand from "./SliderBrand";
 import { useTranslations, useLocale } from "next-intl";
-import { Linkedin, Instagram, Zap } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react";
 
 const XIcon = ({ size = 20, color = "currentColor" }) => (
   <svg width={size} height={size} viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -83,6 +82,16 @@ export default function Banner() {
                         position: relative;
                         z-index: 10;
                     }
+                    .banner-top-badges {
+                        gap: 5px;
+                        margin: 50px 0 0px;
+                    }
+                    @media (max-width: 768px) {
+                        .banner-top-badges {
+                            gap: 0px;
+                            margin: 15px 0px 0px;
+                        }
+                    }
                 `}</style>
 
                 {/* Background Carousel */}
@@ -133,7 +142,7 @@ export default function Banner() {
                             <div className="col-xl-12" style={{ textAlign: isRtl ? 'right' : 'left' }}>
                                 <div className="main-slider-two__content">
                                     <div className="banner-text-content-wrapper">
-                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', marginBottom: '15px', justifyContent: isRtl ? 'flex-start' : 'flex-start' }}>
+                                        <div className="banner-top-badges" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: isRtl ? 'flex-start' : 'flex-start' }}>
                                             <div className="main-slider-two__sub-title-box" style={{ 
                                                 display: 'inline-flex', 
                                                 alignItems: 'center',
