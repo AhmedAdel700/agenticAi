@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Phone, X, MessageSquare, MessageCircle, Bot } from "lucide-react";
+import { Phone, X, MessageCircle, Bot } from "lucide-react";
 
 export default function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,9 +43,9 @@ export default function FloatingContact() {
         <button
           onClick={(e) => {
             e.preventDefault();
-            // @ts-ignore
+            // @ts-expect-error Tawk_API is injected by external script
             if (typeof window !== "undefined" && window.Tawk_API) {
-              // @ts-ignore
+              // @ts-expect-error Tawk_API is injected by external script
               window.Tawk_API.toggle();
             }
           }}

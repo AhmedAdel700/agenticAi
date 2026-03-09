@@ -65,7 +65,7 @@ export default function AnimatedTitle({
       if (animation.scrollTrigger) animation.scrollTrigger.kill();
       split.revert();
     };
-  }, [animationStyle, locale]);
+  }, [animationStyle, locale, isArabic]);
 
   return (
     <div ref={titleRef}>
